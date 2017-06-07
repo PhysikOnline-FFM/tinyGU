@@ -15,7 +15,7 @@ export class TranslationService {
   }
 
   set currentLang(lang: string) {
-    this.currentLang = lang;
+    this.language = lang;
   }
 
   translate(string: string): string {

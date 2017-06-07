@@ -11,7 +11,7 @@ export class ShortenerComponent implements OnInit {
   showMoreOptions = false;
   link = '';
   shortLink = '';
-  strinsg = STRINGS;
+  strings = STRINGS;
 
 
   constructor() { }

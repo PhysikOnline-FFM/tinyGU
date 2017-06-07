@@ -1,7 +1,7 @@
 <div id="shortener-input">
   <img src="http://physikonline.uni-frankfurt.de/portal/files/2015-12/d09f32d6-4ff0-11e5-92ce-1cee7e72194a.png" alt="" id="tinygu-logo">
   <div class="mdl-textfield mdl-js-textfield shortener-input-div">
-    <input type="text" class="shortener-input" placeholder={{ strings['exampleURL'] }} [(ngModel)]="link" (keyup)="onInput()">
+    <input type="text" class="shortener-input" placeholder="{{ strings['exampleURL'] }}" [(ngModel)]="link" (keyup)="onInput()">
   </div>
   <div *ngIf="inputUsed" id="shortener-after-input-box">
     <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
@@ -14,7 +14,7 @@
       <div class="mdl-textfield mdl-js-textfield shortener-input-div" id="custom-shortlink-div">
         <!-- TODO add domain tinygu.de/ -->
         <input type="text" class="shortener-input" id="custom-shortlink"
-               placeholder={{ 'Custom shortlink (optional)' | translate }} [(ngModel)]="shortLink">
+               placeholder="{{ 'Custom shortlink (optional)' | translate }}" [(ngModel)]="shortLink">
       </div>
       <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect"
               id="more-options-add-to-account">

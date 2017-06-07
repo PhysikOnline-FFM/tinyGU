@@ -5,10 +5,11 @@ export const TRANSLATIONS = {
     "Shorten": "Kürzen",
     "Account": "Account",
     "Help": "Hilfe",
-    "About": "Über uns",
+    "About": "Über Uns",
     "More Options": "Mehr",
-    "Custom shortlink (optional)": "eigene URL (optional)",
+    "Custom shortlink (optional)": "Eigene URL (Optional)",
     "Add to Account": "Zu Account hinzufügen",
+    "Language": "Sprache",
 
   }
 };

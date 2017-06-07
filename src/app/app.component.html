@@ -11,16 +11,17 @@
         <div class="mdl-layout-spacer"></div>
         <!-- Navigation -->
         <nav class="mdl-navigation">
-          <a *ngIf="!loggedIn" class="mdl-navigation__link" href="">{{ Login | translate }}</a>
+          <a *ngIf="!loggedIn" class="mdl-navigation__link" href="">{{ 'Login' | translate }}</a>
+          <a class="mdl-navigation__link" (click)="onLanguageChange()">{{ 'Language' | translate }}</a>
         </nav>
       </div>
     </header>
     <div class="mdl-layout__drawer">
       <span class="mdl-layout-title">{{ strings["Title"] }}</span>
       <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="">{{ Account | translate }}</a>
-        <a class="mdl-navigation__link" href="">{{ Help | translate }}</a>
-        <a class="mdl-navigation__link" href="">{{ About | translate }}</a>
+        <a class="mdl-navigation__link" href="">{{ 'Account' | translate }}</a>
+        <a class="mdl-navigation__link" href="">{{ 'Help' | translate }}</a>
+        <a class="mdl-navigation__link" href="">{{ 'About' | translate }}</a>
       </nav>
     </div>
     <main class="mdl-layout__content">
@@ -29,7 +30,7 @@
       </div>
       <footer id="footer">
         <div id="footerContent">
-          <span class="poweredByPO">{{ strings['footer'] }}</span>
+          <span class="poweredByPO">Build with <span style="color: #FF8E8E;font-size: 140%;">♥</span> by <a href="https://physikonline.uni-frankfurt.de">PhysikOnline</a></span>
         </div>
       </footer>
     </main>

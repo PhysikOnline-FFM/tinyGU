@@ -1,6 +1,14 @@
 
-export const translations = {
+export const TRANSLATIONS = {
   "de": {
-    "Shorten": "Kürzen"
+    "Login": "Anmelden",
+    "Shorten": "Kürzen",
+    "Account": "Account",
+    "Help": "Hilfe",
+    "About": "Über uns",
+    "More Options": "Mehr",
+    "Custom shortlink (optional)": "eigene URL (optional)",
+    "Add to Account": "Zu Account hinzufügen",
+
   }
 };

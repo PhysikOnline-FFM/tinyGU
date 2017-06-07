@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {STRINGS} from "../../../strings";
 
 @Component({
   selector: 'app-shortener',
@@ -10,6 +11,7 @@ export class ShortenerComponent implements OnInit {
   showMoreOptions = false;
   link = '';
   shortLink = '';
+  strinsg = STRINGS;
 
 
   constructor() { }

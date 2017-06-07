@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {translations} from "./translations";
+import {TRANSLATIONS} from "./translations";
 
 @Injectable()
 export class TranslationService {
@@ -7,7 +7,7 @@ export class TranslationService {
   private translations;
 
   constructor() {
-    this.translations = translations;
+    this.translations = TRANSLATIONS;
   }
 
   get currentLang() {
@@ -15,7 +15,7 @@ export class TranslationService {
   }
 
   set currentLang(lang: string) {
-    this.currentLang = lang;
+    this.language = lang;
   }
 
   translate(string: string): string {

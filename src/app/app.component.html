@@ -12,7 +12,11 @@
         <!-- Navigation -->
         <nav class="mdl-navigation">
           <a *ngIf="!loggedIn" class="mdl-navigation__link" href="">{{ 'Login' | translate }}</a>
-          <a class="mdl-navigation__link" (click)="onLanguageChange()">{{ 'Language' | translate }}</a>
+          <!--<a  class="mdl-navigation__link" (click)="onLanguageChange()">{{ 'Language' | translate }}</a>-->
+          <!-- TODO: remove inline css -->
+          <button style="padding: 0 16px; height: 36px" class="mdl-navigation mdl-button mdl-js-button" (click)="onLanguageChange()">
+            {{ 'Language' | translate }}
+          </button>
         </nav>
       </div>
     </header>

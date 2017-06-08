@@ -11,15 +11,23 @@
       {{ 'More Options' | translate }}
     </button>
     <div *ngIf="showMoreOptions" id="shortener-more-options-box">
-      <div class="mdl-textfield mdl-js-textfield shortener-input-div" id="custom-shortlink-div">
-        <!-- TODO add domain tinygu.de/ -->
+      <!-- TODO add domain tinygu.de/ -->
+      <!--<div style="float:left; display:flex; overflow: hidden; background-color: transparent" class="mdl-chip" >{{ strings['URLprefix'] }}</div>-->
+      <!-- TODO: remove inline css -->
+      <span style="background-color: transparent" class="mdl-chip">
+        <span class="mdl-chip__text">{{ strings['URLprefix'] }}</span>
+      </span>
+      <!-- TODO: remove inline css -->
+      <div style="float:right; display:flex; overflow: hidden" class="mdl-textfield mdl-js-textfield shortener-input-div" id="custom-shortlink-div">
         <input type="text" class="shortener-input" id="custom-shortlink"
                placeholder="{{ 'Custom shortlink (optional)' | translate }}" [(ngModel)]="shortLink">
       </div>
+      <!--
       <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect"
               id="more-options-add-to-account">
         {{ 'Add to Account' | translate }}
       </button>
+      -->
     </div>
   </div>
 </div>

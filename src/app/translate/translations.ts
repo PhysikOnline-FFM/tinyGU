@@ -9,7 +9,7 @@ export const TRANSLATIONS = {
     "More Options": "Mehr",
     "Custom shortlink (optional)": "Eigene URL (Optional)",
     "Add to Account": "Zu Account hinzufügen",
-    "Language": "Sprache",
+    "Language": 'EN / DE',
 
   }
 };

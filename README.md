@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.0.
 
+## Install Requirements
+
+install npm
+install angular cli: `npm isntall -g @angular/cli`
+navigate to the TinyGU Folder in the terminal and run `npm install`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

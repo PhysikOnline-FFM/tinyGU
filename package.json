@@ -24,7 +24,11 @@
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/router": "^4.2.4",
     "core-js": "^2.4.1",
+    "generate": "^0.14.0",
+    "generate-travis": "^0.3.1",
+    "generator-travis": "^1.5.3",
     "rxjs": "^5.4.2",
+    "yo": "^2.0.0",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {

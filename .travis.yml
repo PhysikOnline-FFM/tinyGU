@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - 7
+  - 6
+  - 4
+
+before_script:
+   - npm install -g @angular/cli
+   - npm install --save @angular/material @angular/cdk
+   - npm install --save @angular/animations
+
+script:
+   - ng build --prod
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  on:
+    branch: master

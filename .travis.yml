@@ -1,20 +1,38 @@
-language: node_js
-node_js:
-  - 7
-  - 6
-  - 4
+# https://loiane.com/2017/09/continuous-integration-with-angular-cli-travis-ci-firebase-greenkeeper-github/
+# https://caveofcode.com/2017/05/publish-an-angular-app-to-github-pages/amp/
 
-before_script:
+language: node_js
+
+node_js:
+   - node # will use latest node
+
+branches:
+    only:
+      - master
+# +    - /^greenkeeper/.*$/
+
+cache:
+  directories:
+    - node_modules
+
+before_script: # commands to run before the build step
+   - npm install -g --silent @angular/cli
    - npm install -g @angular/cli
    - npm install --save @angular/material @angular/cdk
-   - npm install --save @angular/animations
+#   - npm install --save @angular/animations
+   - npm install
 
-script:
-   - ng build --prod
+script: # the build step
+#   - npm run build.prod
+   - ng build --prod --base-href "https://physikonline-ffm.github.io/tinyGU/"
 
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  local_dir: dist
   on:
     branch: master
+
+notifications:
+  email: false

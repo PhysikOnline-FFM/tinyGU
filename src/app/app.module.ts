@@ -5,15 +5,27 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material/material.module';
+import { AboutComponent } from './about/about.component';
+import { AccountComponent } from './account/account.component';
+import { HelpComponent } from './help/help.component';
+import { routing } from './app.routing';
+import { ShortenerComponent } from './shortener/shortener.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AboutComponent,
+    AccountComponent,
+    HelpComponent,
+    ShortenerComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FlexLayoutModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'TinyGU';
+  navItems = [
+    { name: 'About', route: '/about' },
+    { name: 'Account', route: '/account' },
+    { name: 'Help', route: '/help' },
+  ];
 }

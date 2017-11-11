@@ -1,13 +1,14 @@
-<div>
+<div fxLayout="column" fxLayoutAlign="start center" fxFill>
   <img src="http://physikonline.uni-frankfurt.de/portal/files/2015-12/d09f32d6-4ff0-11e5-92ce-1cee7e72194a.png" alt="" id="tinygu-logo">
 
   <!--<form>-->
-    <mat-form-field>
+    <mat-form-field style="width: 35%"> <!--TODO remove inline style-->
+      <!--TODO https://stackoverflow.com/questions/38145283/grow-width-of-input-on-focus-in-angular2-->
       <input matInput placeholder="http://example.uni-frankfurt.de/..." [(ngModel)]="inputContent">
     </mat-form-field>
   <!--</form >-->
 
-  <div *ngIf="true">
+  <div *ngIf="inputContent">
     <p>{{ inputContent }}</p>
 
     <button mat-button>shorten</button>
@@ -17,8 +18,11 @@
     </button>
 
     <div *ngIf="moreOptions">
-      <input matInput placeholder="custom url">
-      <button mat-button>add to account</button>
+      <mat-form-field>
+        <input matInput placeholder="custom url">
+        <div matPrefix>goethe.link/</div>
+      </mat-form-field>
+        <button mat-button>add to account</button>
     </div>
 
   </div>

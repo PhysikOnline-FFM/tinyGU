@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShortenerComponent implements OnInit {
 
+  inputUsed = false;
+  moreOptions = false;
+  inputContent = '';
+
   constructor() { }
 
   ngOnInit() {

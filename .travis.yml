@@ -1,6 +1,9 @@
 # https://loiane.com/2017/09/continuous-integration-with-angular-cli-travis-ci-firebase-greenkeeper-github/
 # https://caveofcode.com/2017/05/publish-an-angular-app-to-github-pages/amp/
 
+# https://medium.com/@cpavnn/deploy-to-firebase-hosting-from-github-3772fed05e72
+# https://coryrylan.com/blog/deploy-angular-cli-apps-to-firebase
+
 language: node_js
 
 node_js:

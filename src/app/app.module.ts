@@ -11,6 +11,7 @@ import { HelpComponent } from './help/help.component';
 import { routing } from './app.routing';
 import { ShortenerComponent } from './shortener/shortener.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
+    FormsModule,
+    ReactiveFormsModule,
     routing
   ],
   providers: [],

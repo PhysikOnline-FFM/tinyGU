@@ -1,3 +1,26 @@
-<p>
-  shortener works!
-</p>
+<div>
+  <img src="http://physikonline.uni-frankfurt.de/portal/files/2015-12/d09f32d6-4ff0-11e5-92ce-1cee7e72194a.png" alt="" id="tinygu-logo">
+
+  <!--<form>-->
+    <mat-form-field>
+      <input matInput placeholder="http://example.uni-frankfurt.de/..." [(ngModel)]="inputContent">
+    </mat-form-field>
+  <!--</form >-->
+
+  <div *ngIf="true">
+    <p>{{ inputContent }}</p>
+
+    <button mat-button>shorten</button>
+
+    <button mat-button (click)="moreOptions = !moreOptions">
+      more options
+    </button>
+
+    <div *ngIf="moreOptions">
+      <input matInput placeholder="custom url">
+      <button mat-button>add to account</button>
+    </div>
+
+  </div>
+
+</div>

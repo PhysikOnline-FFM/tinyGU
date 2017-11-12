@@ -1,0 +1,118 @@
+// TODO ...
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define a custom mixin that takes in the current theme
+@mixin user-component-theme($mat-custom) {
+  // Parse the theme and create variables for each color in the pallete
+  $primary: map-get($mat-custom, primary);
+  $accent: map-get($mat-custom, accent);
+  $warn: map-get($mat-custom, warn);
+  //$background: map-get($mat-custom, A100);
+  // Create theme specfic styles
+  .user-component-theme {
+    background-color: mat-color($warn);
+  }
+}
+
+$mat-custom: (
+  50 : #e0ecf5,
+  100 : #b3cfe5,
+  200 : #80afd4,
+  300 : #4d8ec2,
+  400 : #2676b5,
+  500 : #005ea8,
+  600 : #0056a0,
+  700 : #004c97,
+  800 : #00428d,
+  900 : #00317d,
+  //A100 : #aac4ff,
+  A100 : #7000ff,
+  //A200 : #77a1ff,
+  A200 : #7000ff,
+  //A400 : #447eff,
+  A400 : #7000ff,
+
+  A700 : #2a6cff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #ffffff,
+    A700 : #ffffff,
+
+    //50 : #FF0000,
+    //100 : #FF0000,
+    //200 : #FF0000,
+    //300 : #FF0000,
+    //400 : #FF0000,
+    //500 : #FF0000,
+    //600 : #FF0000,
+    //700 : #FF0000,
+    //800 : #FF0000,
+    //900 : #FF0000,
+    //A100 : #FF0000,
+    //A200 : #FF0000,
+    //A400 : #FF0000,
+    //A700 : #FF0000,
+
+  )
+);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+$candy-app-primary: mat-palette($mat-custom);
+$candy-app-accent:  mat-palette($mat-pink, A200, A100, A400);
+//$candy-app-background: mat-color(#005ea8);
+
+// The warn palette is optional (defaults to red).
+$candy-app-warn:    mat-palette($mat-pink);
+
+
+//$candy-app-background: mat-palette($mat-custom);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$candy-app-theme: mat-dark-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
+//$candy-app-theme: (
+//  primary: mat-palette($mat-custom),
+//  accent:  mat-palette($mat-custom),
+//  warn:  mat-palette($mat-custom),
+//  is-dark: true,
+//  foreground: $mat-dark-theme-foreground,
+//  background: $mat-dark-theme-background
+//);
+
+//$candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+//@include angular-material-theme($candy-app-theme);
+@include angular-material-theme($candy-app-theme);
+//@include user-component-theme($candy-app-theme);
+
+//.primary-background-color{
+//  background-color: map-get($candy-app-primary, A100) !important;
+//}
+
+//$background: #ff021b;
+//$background-highlight: darken($background,3%);
+
+.mat-drawer-container{
+  background-color: #005ea8;
+}

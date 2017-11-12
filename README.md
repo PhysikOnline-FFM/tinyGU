@@ -6,8 +6,19 @@
 - https://github.com/angular/flex-layout
 
 ## Automatic deployment on GitHub Pages
+
+Demo at  
+https://physikonline-ffm.github.io/tinyGU
+
 via Travis CI the Project is automatically built and pushed to the gh-pages branch. The .travis.yml-config file is in the root directoy.
-not set up yet but possible would be an integration of greenkeeper.io which automatically updates the packages for the builds at travis.
+
+Not set up yet but generally possible would be an integration of greenkeeper.io which automatically updates the packages for the builds at travis.
+
+## Material Color Style
+
+https://material.io/color/#!/?primary.color=005ea8
+
+http://mcg.mbitson.com/#!?mcgpalette0=%23005ea8
 
 ## Angular CLI
 

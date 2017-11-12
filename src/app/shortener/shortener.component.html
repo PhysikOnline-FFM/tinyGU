@@ -4,12 +4,19 @@
   <!--<form>-->
     <mat-form-field style="width: 35%"> <!--TODO remove inline style-->
       <!--TODO https://stackoverflow.com/questions/38145283/grow-width-of-input-on-focus-in-angular2-->
-      <input matInput placeholder="http://example.uni-frankfurt.de/..." [(ngModel)]="inputContent">
+      <div class="mat-button" style="background-color: grey; width: 100%"> <!--TODO inline style-->
+        <input matInput placeholder="http://example.uni-frankfurt.de/..."
+               [(ngModel)]="inputURL"
+               [formControl]="urlFormControl">
+      </div>
+      <mat-error *ngIf="urlFormControl.hasError('pattern')">
+        Please enter a valid URL
+      </mat-error>
     </mat-form-field>
   <!--</form >-->
 
-  <div *ngIf="inputContent">
-    <p>{{ inputContent }}</p>
+  <div *ngIf="inputURL">
+    <p>{{ inputURL }}</p>
 
     <button mat-button>shorten</button>
 

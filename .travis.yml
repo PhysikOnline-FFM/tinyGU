@@ -20,9 +20,9 @@ cache:
     - node_modules
 
 before_script: # commands to run before the build step
-   - npm install -g --silent @angular/cli
-   - npm install -g @angular/cli
-   - npm install --save @angular/material @angular/cdk
+#   - npm install -g --silent @angular/cli
+#   - npm install -g @angular/cli
+#   - npm install --save @angular/material @angular/cdk
 #   - npm install --save @angular/animations
    - npm install
 
@@ -43,8 +43,10 @@ notifications:
   email: false
   slack: # <USER>:<TOKEN>#<CHANNEL>
     rooms:
-      # encrypt with http://travis-encrypt.github.io/
-      secure: "1C4mQOvNu7wwbWcDbvCc501AoTC3drs7hSRBdOrbYZk/tN6+cKO47IgmFgQZ5japv+hlxTRoxhvRoKP6BkBO/mf2oOCD3XyECW3WrCwXvuMSqomhgeBa9fUI/cF8Ah5eGflpLXV9kk6jKyocEGSdwBPho7Ox0Teq/s7HyFupvXFyl5LHgKDlOe3m6JrIIIxGm9c3Dh4nC+fzT4Pps1F/LgbGCewC3v/AiXts8+2TOkCksAu7K4cEcpiVJXz6p7z1BZdyLiX8KTX/TAZZDNpVvSM5QqsBN/sk+vkVsgUTFgqUVsQePs/d2xOzWOgTeEIUKZCaULMadJ5C1VoapfiXI7kl2068eWxbRQ+QnAyHiaDp84J+ycfVrGUVTOr8cpbHVz7nAyWoyiLzsaAnYZ0r15n8p1RTp+5UXgIJMzXiN8Iz2NbO2Fo9zUk8BF6Cfv+TuALsLxtFostFS1de4jQGsamdwAIhfUYOPrTMqrWVFXRUB9g6vfWFWqdZ8VE/e8Ibf7b2BJy1B1u7ot4k2O0AmJ4iiKXHrhWPL1WIjB7JWXwLnLFnJRwLwx32saLcEf9mHpizHBaHqGERqxDTkj1xOf/owgezMCbN2IcKme3VPXb3+3dqBg58uTAxxZ9UjGYUS2g4xu7fRlEcIxfwPCVEKB54DXsxMDTZkKQ2B6XXO50="
+      # https://travis-encrypt.github.io/
+      # travis encrypt "<account>:<token>" --add notifications.slack -r accountName/repoName
+      # travis encrypt "<account>:<token>#channel" --add notifications.slack.rooms
+      secure: "ObvimdNiDdb5NURHdyVfNN4VqWRxVM4EWsVkf7saPAH754yg2lYEnaKPqflUsbwpgpHzafsikRSR5t9bjs6JmilR6W1tTxNrbqNZWuQobv+tqMJFuWBbAVjCjlEjPiuK3ULxl+ekXSAhz0mXFweyrDpmA78OSvJY1d+fa3DqvdANQhHC/pAm3Lt20Nih4O06rIEnEbGobjELOIRaN5HmxEZcvoC+UDcMcRRoLLJBUPHyNxrvYiKYezrua+1wwAmA30aE/4Nr0v3Xzx/obieWgem0zvlsCpIhXIyyjQ7F3p9/IHImToGGouGj3ThQXE9N7wYujQuFXb0sSUEWBfucALPein4kEZfmsvF7nYlPjKfasl8f0sevg8UtDqpgBpzhwZZNJWIrDr46gIKIXNaYS8XHLeP1pXWKEgWPG5su93K6U0Az5YSJbaRkA4Peg2ZMOeLAf9iYiNEdkIsnVo+xPsBxk6A0K+vQrWEvBdfHIoUJeg8Lpxcr3A2dKgLTbMNUWJIMLBGHBCRD2E9aJ5s9hY2fGSBAenaoElSlhhlp5oHT+n3eabECLtutWzME6ROW5RAKc/K+1cuz7qJArjaoXQby1V5Jb/K7B1BwZgvKb2xmJMzy15VBURHVZioF16s+P05RY+rbRrx/ZajaQsMo9IhEcY8o6zEu18CbvwYr/Wo="
       on_start: always
       on_failure: always
       on_success: always

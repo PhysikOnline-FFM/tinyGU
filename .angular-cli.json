@@ -20,7 +20,7 @@
       "prefix": "app",
       "styles": [
         "styles.scss",
-//        "assets/mat-physikonline.scss"
+        "assets/mat-physikonline.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

@@ -1,37 +1,60 @@
-<div fxLayout="column" fxLayoutAlign="start center" fxFill>
-  <img src="http://physikonline.uni-frankfurt.de/portal/files/2015-12/d09f32d6-4ff0-11e5-92ce-1cee7e72194a.png" alt="" id="tinygu-logo">
+<div fxFlexFill fxLayoutAlign="start center" fxLayout="column">
+  <div fxFlex="auto">
+    <img src="http://physikonline.uni-frankfurt.de/portal/files/2015-12/d09f32d6-4ff0-11e5-92ce-1cee7e72194a.png" alt="" id="tinygu-logo">
+  </div>
 
-  <!--<form>-->
-    <mat-form-field style="width: 35%"> <!--TODO remove inline style-->
-      <!--TODO https://stackoverflow.com/questions/38145283/grow-width-of-input-on-focus-in-angular2-->
-      <div class="mat-button" style="background-color: grey; width: 100%"> <!--TODO inline style-->
-        <input matInput placeholder="http://example.uni-frankfurt.de/..."
-               [(ngModel)]="inputURL"
-               [formControl]="urlFormControl">
-      </div>
-      <mat-error *ngIf="urlFormControl.hasError('pattern')">
-        Please enter a valid URL
-      </mat-error>
-    </mat-form-field>
-  <!--</form >-->
+  <div fxLayout="column" fxLayoutAlign="start center" fxFill fxFlex="auto">
 
-  <div *ngIf="inputURL">
-    <p>{{ inputURL }}</p>
-
-    <button mat-button>shorten</button>
-
-    <button mat-button (click)="moreOptions = !moreOptions">
-      more options
-    </button>
-
-    <div *ngIf="moreOptions">
-      <mat-form-field>
-        <input matInput placeholder="custom url">
-        <div matPrefix>goethe.link/</div>
+    <!--<form>-->
+    <div style="width: 500px;">
+      <mat-form-field floatPlaceholder="never"
+                      class="input-box"
+                      style="width: 100%"> <!--TODO remove inline style-->
+        <!--TODO https://stackoverflow.com/questions/38145283/grow-width-of-input-on-focus-in-angular2-->
+        <div> <!-- class="mat-button"> <!--style="background-color: grey; width: 100%"> <!--TODO inline style-->
+          <input matInput
+                 placeholder="http://example.uni-frankfurt.de/..."
+                 [(ngModel)]="inputURL"
+                 [formControl]="urlFormControl">
+        </div>
+        <mat-error *ngIf="urlFormControl.hasError('pattern')">
+          Please enter a valid URL
+        </mat-error>
       </mat-form-field>
-        <button mat-button>add to account</button>
+    </div>
+
+    <!--<mdc-textfield-box label="Your Uni Frankfurt URL"-->
+                       <!--id="url"-->
+                       <!--[(ngModel)]="inputURL"-->
+                       <!--[formControl]="urlFormControl"-->
+                       <!--class="mat-elevation-z5"-->
+                       <!--style="background-color: rgba(255, 255, 255, 0.55)"-->
+    <!--&gt;-->
+    <!--</mdc-textfield-box>-->
+    <!--<p mdc-textfield-helptext-->
+       <!--[validation]="!urlFormControl.hasError('pattern')">Please enter a valid URL</p>-->
+    <!--</form >-->
+
+    <div *ngIf="inputURL" fxLayout="column" fxLayoutAlign="space-between center">
+      <!--<p>{{ inputURL }}</p>-->
+
+      <div fxLayoutAlign="space-between">
+        <button mat-button>shorten</button>
+
+        <button mat-button (click)="moreOptions = !moreOptions">
+          more options
+        </button>
+      </div>
+
+      <div *ngIf="moreOptions" fxLayoutAlign="center">
+        <mat-form-field floatPlaceholder="never">
+          <input matInput placeholder="custom url">
+          <div matPrefix>goethe.link/</div>
+        </mat-form-field>
+          <button mat-button>add to account</button>
+      </div>
+
     </div>
 
   </div>
-
 </div>

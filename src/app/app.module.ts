@@ -5,6 +5,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material/material.module';
+import { AngularmdcwebModule } from './angularmdcweb/angularmdcweb.module';
 import { AboutComponent } from './about/about.component';
 import { AccountComponent } from './account/account.component';
 import { HelpComponent } from './help/help.component';
@@ -25,10 +26,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
+    AngularmdcwebModule,
     FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule,
-    routing
+    routing,
   ],
   providers: [],
   bootstrap: [AppComponent]

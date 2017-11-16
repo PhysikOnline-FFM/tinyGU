@@ -6,12 +6,13 @@
 
     <mat-nav-list class="mat-nav-list">
 
-      <span mat-card-title
-            routerLink
-            [routerLink]="['/short']"
-            (click)="start.close()">
+      <p mat-card-title
+         routerLink
+         [routerLink]="['/short']"
+         (click)="start.close()"
+          style="padding: 0px 2em;"> <!--TODO inline style-->
         TinyGU
-      </span>
+      </p>
 
       <a *ngFor="let navItem of navItems"
          mat-list-item
@@ -30,21 +31,25 @@
   <div fxLayout="column" fxFlexFill>
 
     <!--<div fxFlex="">-->
-    <mat-toolbar color="primary" class="mat-toolbar" style="background-color: transparent"> <!--TODO: remove inline style style="background-color: transparent"-->
+    <mat-toolbar color="primary" class="mat-toolbar"  style="background-color: transparent"> <!--TODO: remove inline style style="background-color: transparent"-->
 
-      <div>
-        <button mat-icon-button
-                (click)="start.open('mouse')">
-          <mat-icon>menu</mat-icon>
-        </button>
+      <!--<div fxLayoutAlign="center">-->
+        <div fxLayoutAlign="none center">
+          <button mat-icon-button
+                  (click)="start.open('mouse')">
+            <mat-icon>menu</mat-icon>
+          </button>
 
-        <span>TinyGU</span>
-      </div>
+          <span>TinyGU</span>
+        </div>
 
-      <div>
-        <a href = "" class="mat-tab-link">Login</a >
-        <a href = "" >Language</a >
-      </div>
+        <div fxFlex="1 1 auto"></div>
+
+        <div>
+          <button class="mat-button">Login</button>
+          <button mat-button>Language</button>
+        </div>
+      <!--</div>-->
 
     </mat-toolbar>
     <!--</div>-->
@@ -55,11 +60,11 @@
 
     <!--<div fxFlex>-->
     <mat-card-footer fxLayoutAlign="center">
-      <span>Build with <span style="color: #FF8E8E;font-size: 140%;">♥</span> by
+      <p class="mat-body">Build with <span style="color: #FF8E8E;font-size: 140%;">♥</span> by
         <a href="https://physikonline.uni-frankfurt.de">
           PhysikOnline
         </a>
-      </span>
+      </p>
     </mat-card-footer>
     <!--</div>-->
 

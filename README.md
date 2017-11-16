@@ -4,6 +4,7 @@
 - https://angular.io/
 - https://material.angular.io/
 - https://github.com/angular/flex-layout
+- https://github.com/trimox/angular-mdc-web (only for the mdc-textfield-box)
 
 ## Automatic deployment on GitHub Pages
 

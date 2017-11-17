@@ -25,6 +25,7 @@ export class ShortenerComponent implements OnInit {
   inputUsed = false;
   moreOptions = false;
   inputURL = '';
+  loggedInVar = false;
 
   urlFormControl = new FormControl('', [Validators.pattern(URL_REGEX), Validators.pattern((GOETHE_URL_REGEX))]);
 
@@ -33,4 +34,7 @@ export class ShortenerComponent implements OnInit {
   ngOnInit() {
   }
 
+  onShorten() {
+    this.loggedInVar = true;
+  }
 }

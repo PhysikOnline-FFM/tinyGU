@@ -1,23 +1,45 @@
 @import "../../../node_modules/@angular/material/prebuilt-themes/pink-bluegrey";
 
+$input-padding: 0px 0px 13.5px 16px;   //padding: 0px 0px 8px 16px;
+
 /deep/ .input-box .mat-input-infix {
   @extend .mat-elevation-z8;
-  background-color: rgba(255, 255, 255, 0.6);
-  padding: 0 0 8px 16px;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: $input-padding;
   border-radius: 4px 4px 0 0;
   //@extend .mat-elevation-z5;
   //height: 28px;
 }
 
-/deep/ .mat-input-placeholder {
-  //padding: 8px 16px;
-  padding: 0px 0px 0px 16px;
+/deep/ .input-box  .mat-input-placeholder {
+  padding: $input-padding;
   position: initial !important;
 }
 
 /deep/ .mat-input-element{
   //padding: 8px !important;
 }
+
+.search-box-div{
+  //display: flex;
+  //flex-direction: row;
+  //flex: 1;
+}
+
+.row-div{
+  //flex-direction: row;
+  //flex-grow: 1 0 auto;
+  width: 100%;
+  //align-items: stretch;
+}
+
+.after-row-div{
+  //offset-before: 25%;
+  //offset-start: 25%;
+  align-items: center;
+  flex-basis: 50%;
+}
+
 
 ///deep/ .mat-form-field-can-float .mat-form-field-autofill-control:-webkit-autofill + .mat-form-field-placeholder-wrapper .mat-form-field-placeholder {
 //  transform: translateY(-1.28125em) scale(.15) perspective(100px) translateZ(.001px);

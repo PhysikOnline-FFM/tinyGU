@@ -1,26 +1,30 @@
 <div fxFlexFill fxLayoutAlign="start center" fxLayout="column">
   <div fxFlex="auto">
-    <img src="http://physikonline.uni-frankfurt.de/portal/files/2015-12/d09f32d6-4ff0-11e5-92ce-1cee7e72194a.png" alt="" id="tinygu-logo">
+    <!--<img src="http://physikonline.uni-frankfurt.de/portal/files/2015-12/d09f32d6-4ff0-11e5-92ce-1cee7e72194a.png" alt="" id="tinygu-logo">-->
+    <img src="../../assets/link_icon.png" id="tinygu-logo">
   </div>
 
-  <div fxLayout="column" fxLayoutAlign="start center" fxFill fxFlex="auto">
+  <div fxLayout="column" fxLayoutAlign="start center" fxFill fxFlexFill fxFlex="auto">
 
     <!--<form>-->
-    <div style="width: 500px;">
-      <mat-form-field floatPlaceholder="never"
-                      class="input-box"
-                      style="width: 100%"> <!--TODO remove inline style-->
-        <!--TODO https://stackoverflow.com/questions/38145283/grow-width-of-input-on-focus-in-angular2-->
-        <div> <!-- class="mat-button"> <!--style="background-color: grey; width: 100%"> <!--TODO inline style-->
-          <input matInput
-                 placeholder="http://example.uni-frankfurt.de/..."
-                 [(ngModel)]="inputURL"
-                 [formControl]="urlFormControl">
-        </div>
-        <mat-error *ngIf="urlFormControl.hasError('pattern')">
-          Please enter a valid URL
-        </mat-error>
-      </mat-form-field>
+    <!--<div fxLayout="row" fxFlex="5vw" fxLayoutAlign="start start"> &lt;!&ndash;TODO inline style style="width: 500px;"&ndash;&gt;-->
+    <div class="row-div"> <!--TODO inline style style="width: 500px;"-->
+      <div class="after-row-div" fxFlexOffset="25%">
+        <mat-form-field floatPlaceholder="never"
+                        class="input-box"
+                        style="width: 100%"> <!--TODO remove inline style-->
+          <!--TODO https://stackoverflow.com/questions/38145283/grow-width-of-input-on-focus-in-angular2-->
+          <div> <!-- class="mat-button"> <!--style="background-color: grey; width: 100%"> <!--TODO inline style-->
+            <input matInput
+                   placeholder="http://example.uni-frankfurt.de/..."
+                   [(ngModel)]="inputURL"
+                   [formControl]="urlFormControl">
+          </div>
+          <mat-error *ngIf="urlFormControl.hasError('pattern')">
+            Please enter a valid URL
+          </mat-error>
+        </mat-form-field>
+      </div>
     </div>
 
     <!--<mdc-textfield-box label="Your Uni Frankfurt URL"-->
@@ -35,23 +39,31 @@
        <!--[validation]="!urlFormControl.hasError('pattern')">Please enter a valid URL</p>-->
     <!--</form >-->
 
-    <div *ngIf="inputURL" fxLayout="column" fxLayoutAlign="space-between center">
+    <div *ngIf="inputURL" fxLayout="column" fxLayoutAlign="start center" fxFlex="nogrow" fxFlexFill fxFlexOffset="2%">
       <!--<p>{{ inputURL }}</p>-->
 
-      <div fxLayoutAlign="space-between">
-        <button mat-button>shorten</button>
+      <div fxLayout="row" class="row-div" >
+        <div class="after-row-div" fxFlexOffset="25%" fxLayoutAlign="space-between">
+          <button mat-button (click)="onShorten()">shorten</button>
 
-        <button mat-button (click)="moreOptions = !moreOptions">
-          more options
-        </button>
+          <button mat-button (click)="moreOptions = !moreOptions">
+            more options
+          </button>
+        </div>
       </div>
 
-      <div *ngIf="moreOptions" fxLayoutAlign="center">
-        <mat-form-field floatPlaceholder="never">
-          <input matInput placeholder="custom url">
-          <div matPrefix>goethe.link/</div>
-        </mat-form-field>
-          <button mat-button>add to account</button>
+      <div *ngIf="moreOptions" fxLayoutAlign="start start" fxLayout="row" class="row-div">
+        <div class="after-row-div" fxFlexOffset="25%">
+          <div fxFlex="grow">
+            <mat-form-field floatPlaceholder="never" style="width: 100%">
+              <input matInput placeholder="custom url">
+              <div matPrefix>goethe.link/</div>
+            </mat-form-field>
+          </div>
+          <div fxFlex="none" fxFlexOffset="2vw">
+            <button mat-button>add to account</button>
+          </div>
+        </div>
       </div>
 
     </div>

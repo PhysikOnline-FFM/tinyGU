@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, Input } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { ActivatedRoute } from '@angular/router';
 
 // some crazy page to generate the regex just with some samples!
 // http://txt2re.com http://regex.inginf.units.it/
@@ -22,19 +24,43 @@ const GOETHE_URL_REGEX = /^(?:.*\.)?(?:uni\-frankfurt\.de)(?:\/.*)?$/;
 })
 export class ShortenerComponent implements OnInit {
 
-  inputUsed = false;
-  moreOptions = false;
-  inputURL = '';
-  loggedInVar = false;
+    inputUsed = false;
 
-  urlFormControl = new FormControl('', [Validators.pattern(URL_REGEX), Validators.pattern((GOETHE_URL_REGEX))]);
+    easteregg = false;
 
-  constructor() { }
+    moreOptions = false;
+    inputURL = '';
+    loggedInVar = false;
+    urlFormControl = new FormControl('', [Validators.pattern(URL_REGEX), Validators.pattern((GOETHE_URL_REGEX))]);
 
-  ngOnInit() {
+    constructor() { }
+
+    ngOnInit() {
+    }
+
   }
 
-  onShorten() {
-    this.loggedInVar = true;
-  }
-}
+// @Component({
+//   selector: 'app-login-reminder-dialog',
+//   templateUrl: '<p>DIALOG</p>'
+// })
+// export class LoginReminderDialogComponent {
+//
+//   animal: string;
+//   name: string;
+//
+//   constructor(public dialog: MatDialog) {}
+//
+//   onShorten(): void {
+//     let dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
+//       width: '250px',
+//       data: { name: this.name, animal: this.animal }
+//     });
+//
+//     dialogRef.afterClosed().subscribe(result => {
+//       console.log('The dialog was closed');
+//       this.animal = result;
+//     });
+//   }
+//
+// }

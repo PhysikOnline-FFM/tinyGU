@@ -29,6 +29,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+Alternatively when using Webstorm, you can set up a run command. Open "edit configurations" in the "Run" Menu. Add a "Bash" configuration. Now put in your Interpreter Path (cmd on Windows should be located at `C:\Windows\system32\cmd.exe`). And as Interpreter options enter `/k ng serve --port 4200`. now you can run the server by simply running the project.
+
 ### Build Angular App
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.

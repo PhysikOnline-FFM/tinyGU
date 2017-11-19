@@ -37,7 +37,12 @@ $input-padding: 0px 0px 13.5px 16px;   //padding: 0px 0px 8px 16px;
   //offset-before: 25%;
   //offset-start: 25%;
   align-items: center;
-  flex-basis: 50%;
+  //min-width: 300px;
+  //flex-basis: 50%;
+}
+
+.after-row-div button {
+  margin-top: 10px;
 }
 
 

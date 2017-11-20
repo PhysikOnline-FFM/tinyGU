@@ -1,20 +1,19 @@
 <div fxFlexFill fxLayoutAlign="start center" fxLayout="column">
   <div fxFlex="auto" fxHide.xs="true">
-    <!--<img src="http://physikonline.uni-frankfurt.de/portal/files/2015-12/d09f32d6-4ff0-11e5-92ce-1cee7e72194a.png" alt="" id="tinygu-logo">-->
     <img src="assets/link_icon.png" id="tinygu-logo">
   </div>
 
-  <div fxLayout="column" fxLayoutAlign="start center" fxFill fxFlexFill fxFlex="auto" fxFlexOffset="5vh">
+  <div fxLayout="column" fxLayoutAlign="start center" fxFill fxFlexFill fxFlex="auto" fxFlexOffset="10px">
 
     <!--<form>-->
     <!--<div fxLayout="row" fxFlex="5vw" fxLayoutAlign="start start"> &lt;!&ndash;TODO inline style style="width: 500px;"&ndash;&gt;-->
     <div class="row-div" fxLayoutAlign="center none"> <!--TODO inline style style="width: 500px;"-->
-      <div class="after-row-div" fxFlexAlign="center" fxFlex="50" fxFlex.lt-sm="90">
+      <div class="after-row-div" fxFlex="50" fxFlex.lt-sm="90"> <!--fxFlexAlign="center"-->
         <mat-form-field floatPlaceholder="never"
                         class="input-box"
                         style="width: 100%"> <!--TODO remove inline style-->
           <!--TODO https://stackoverflow.com/questions/38145283/grow-width-of-input-on-focus-in-angular2-->
-          <div> <!-- class="mat-button"> <!--style="background-color: grey; width: 100%"> <!--TODO inline style-->
+          <div>
             <input matInput
                    placeholder="http://example.uni-frankfurt.de/..."
                    [(ngModel)]="inputURL"
@@ -27,16 +26,10 @@
       </div>
     </div>
 
-    <!--<mdc-textfield-box label="Your Uni Frankfurt URL"-->
-                       <!--id="url"-->
-                       <!--[(ngModel)]="inputURL"-->
-                       <!--[formControl]="urlFormControl"-->
-                       <!--class="mat-elevation-z5"-->
-                       <!--style="background-color: rgba(255, 255, 255, 0.55)"-->
-    <!--&gt;-->
+    <!--<mdc-textfield-box label="Your Uni Frankfurt URL" id="url" [(ngModel)]="inputURL" [formControl]="urlFormControl"-->
+                       <!--class="mat-elevation-z5" style="background-color: rgba(255, 255, 255, 0.55)">-->
     <!--</mdc-textfield-box>-->
-    <!--<p mdc-textfield-helptext-->
-       <!--[validation]="!urlFormControl.hasError('pattern')">Please enter a valid URL</p>-->
+    <!--<p mdc-textfield-helptext [validation]="!urlFormControl.hasError('pattern')">Please enter a valid URL</p>-->
     <!--</form >-->
 
     <div *ngIf="inputURL" fxLayout="column" fxLayoutAlign="start center" fxFlex="nogrow" fxFlexFill fxFlexOffset="4vh">
@@ -49,9 +42,7 @@
         </div>
       </div>
 
-      <!--<div class="row-div" *ngIf="moreOptions" fxLayoutAlign="start start">-->
       <div class="row-div" fxLayoutAlign="center none" *ngIf="moreOptions">
-        <!--<div class="after-row-div" fxFlexOffset="25%" fxFlex="50" fxLayout="row" fxLayout.lt-sm="column">-->
         <div class="after-row-div" fxFlexAlign="center" fxFlex="50" fxFlex.lt-sm="90" fxLayout="row" fxLayout.lt-sm="column">
           <div fxFlex="grow">
             <mat-form-field floatPlaceholder="never" style="width: 100%">
@@ -66,7 +57,7 @@
       </div>
 
       <div class="row-div" fxLayoutAlign="center none" *ngIf="easteregg">
-        <div class="after-row-div" fxFlexAlign="center" fxFlex="100" fxFlex.lt-sm="90" fxLayout="row" fxLayout.lt-sm="column">
+        <div class="after-row-div" fxFlexAlign="center" fxFlex="100" fxLayout="row" fxLayout.lt-sm="column">
           <button mat-raised-button>raised</button>
           <button mat-raised-button color="primary">r primary</button>
           <button mat-raised-button color="warn">r warn</button>

@@ -17,50 +17,41 @@ const URL_REGEX =    /^(?:(?:https?|ftps?|mailto):)?(\/\/)?(?:\S+(?::\S*)?@)?(?:
 const GOETHE_URL_REGEX = /^(?:.*\.)?(?:uni\-frankfurt\.de)(?:\/.*)?$/;
 // const COMBINED_URL_REGEX = new RegExp(URL_REGEX.source + GOETHE_URL_REGEX.source);
 
-  @Component({
+@Component({
   selector: 'app-shortener',
   templateUrl: './shortener.component.html',
   styleUrls: ['./shortener.component.scss']
 })
 export class ShortenerComponent implements OnInit {
+  constructor(public dialog: MatDialog) { }
 
-    inputUsed = false;
+  easteregg = false;
+  moreOptions = false;
+  inputURL = '';
+  loggedInVar = false;
 
-    easteregg = false;
+  urlFormControl = new FormControl('', [Validators.pattern(URL_REGEX), Validators.pattern((GOETHE_URL_REGEX))]);
 
-    moreOptions = false;
-    inputURL = '';
-    loggedInVar = false;
-    urlFormControl = new FormControl('', [Validators.pattern(URL_REGEX), Validators.pattern((GOETHE_URL_REGEX))]);
-
-    constructor() { }
-
-    ngOnInit() {
-    }
-
+  ngOnInit() {
   }
 
-// @Component({
-//   selector: 'app-login-reminder-dialog',
-//   templateUrl: '<p>DIALOG</p>'
-// })
-// export class LoginReminderDialogComponent {
-//
-//   animal: string;
-//   name: string;
-//
-//   constructor(public dialog: MatDialog) {}
-//
-//   onShorten(): void {
-//     let dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-//       width: '250px',
-//       data: { name: this.name, animal: this.animal }
-//     });
-//
-//     dialogRef.afterClosed().subscribe(result => {
-//       console.log('The dialog was closed');
-//       this.animal = result;
-//     });
-//   }
-//
-// }
+  onShorten() {
+    this.dialog.open(LoginReminderDialogComponent);
+  }
+
+}
+
+@Component({
+  selector: 'app-login-reminder-dialog',
+  template: `
+  <h2 mat-dialog-title>Create an account</h2>
+  <mat-dialog-content>Do you want to create an account, so you can edit, delete and change the link you create?</mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button mat-dialog-close>No</button>
+    <!-- Can optionally provide a result for the closing dialog. -->
+    <button mat-button [mat-dialog-close]="true">Yes</button>
+  </mat-dialog-actions>`,
+  styleUrls: ['./shortener.component.scss']
+})
+export class LoginReminderDialogComponent {
+}

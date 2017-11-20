@@ -10,9 +10,10 @@ import { AboutComponent } from './about/about.component';
 import { AccountComponent } from './account/account.component';
 import { HelpComponent } from './help/help.component';
 import { routing } from './app.routing';
-import { ShortenerComponent } from './shortener/shortener.component';
+import { ShortenerComponent, LoginReminderDialogComponent } from './shortener/shortener.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AboutComponent,
     AccountComponent,
     HelpComponent,
-    ShortenerComponent
+    ShortenerComponent,
+    LoginReminderDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
     routing,
+    MatDialogModule,
   ],
+  entryComponents: [LoginReminderDialogComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

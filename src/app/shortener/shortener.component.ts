@@ -13,8 +13,8 @@ import { ActivatedRoute } from '@angular/router';
 // TODO use Diegos Script for the benefits of updates
 // i modified the first two clamps and added a ? after the protocol prefix an // to accept urls like  uni-frankfurt.de
 const URL_REGEX =    /^(?:(?:https?|ftps?|mailto):)?(\/\/)?(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,}))\.?)(?::\d{2,5})?(?:[/?#]\S*)?$/i;
-// https://regex101.com/r/QTFb0t/1
-const GOETHE_URL_REGEX = /^(?:.*\.)?(?:uni\-frankfurt\.de)(?:\/.*)?$/;
+// https://regex101.com/r/QTFb0t/3
+const GOETHE_URL_REGEX = /^(?:.*\.|.*\/{2})?(?:uni\-frankfurt\.de|asta\-frankfurt\.de|goethe\-university\-frankfurt\.de|hebis\.de)(?:\/.*)?$/;
 // const COMBINED_URL_REGEX = new RegExp(URL_REGEX.source + GOETHE_URL_REGEX.source);
 
 @Component({

@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-import { AppComponent } from './app.component';
+import { AppComponent, HelpModalComponent } from './app.component';
 import { MaterialModule } from './material/material.module';
 import { AngularmdcwebModule } from './angularmdcweb/angularmdcweb.module';
 import { AboutComponent } from './about/about.component';
@@ -22,7 +22,8 @@ import { MatDialogModule } from '@angular/material';
     AccountComponent,
     HelpComponent,
     ShortenerComponent,
-    LoginReminderDialogComponent
+    LoginReminderDialogComponent,
+    HelpModalComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +36,10 @@ import { MatDialogModule } from '@angular/material';
     routing,
     MatDialogModule,
   ],
-  entryComponents: [LoginReminderDialogComponent],
+  entryComponents: [
+    LoginReminderDialogComponent,
+    HelpModalComponent
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

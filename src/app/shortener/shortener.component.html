@@ -1,4 +1,4 @@
-<div fxFlexFill fxLayoutAlign="start center" fxLayout="column">
+<div fxFill fxFlexFill fxLayoutAlign="start center" fxLayout="column">
   <div fxFlex="auto" fxHide.xs="true">
     <img src="assets/link_icon.png" id="tinygu-logo">
   </div>
@@ -13,12 +13,13 @@
                         class="input-box"
                         style="width: 100%"> <!--TODO remove inline style-->
           <!--TODO https://stackoverflow.com/questions/38145283/grow-width-of-input-on-focus-in-angular2-->
-          <div>
+          <!--<div>-->
             <input matInput
-                   placeholder="http://example.uni-frankfurt.de/..."
-                   [(ngModel)]="inputURL"
-                   [formControl]="urlFormControl">
-          </div>
+                     placeholder="http://example.uni-frankfurt.de/..."
+                     [(ngModel)]="inputURL"
+                     [formControl]="urlFormControl">
+            <!--<mat-icon matSuffix>info</mat-icon>-->
+          <!--</div>-->
           <mat-error *ngIf="urlFormControl.hasError('pattern')">
             Please enter a valid URL
           </mat-error>
@@ -33,7 +34,7 @@
     <!--</form >-->
 
     <div *ngIf="inputURL" fxLayout="column" fxLayoutAlign="start center" fxFlex="nogrow" fxFlexFill fxFlexOffset="4vh">
-      <!--<p>{{ inputURL }}</p>-->
+      <!--<p>{{ inputURL }}</p>--> <!--shows the inputURL content in a paragraph-->
 
       <div class="row-div">
         <div class="after-row-div" fxLayout="row" fxLayout.lt-sm="column" fxFlexOffset="25%" fxFlex="50" fxLayoutAlign="space-between">

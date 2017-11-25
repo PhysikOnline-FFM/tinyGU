@@ -52,8 +52,14 @@
           <button class="mat-raised-button">Language</button>
         </div>
         <div>
-          <button mat-button>Login</button>
-          <button class="mat-button" (click)="easteregg = !easteregg">Language</button>
+          <!--<button mat-icon-button (click)="easteregg = !easteregg"><mat-icon>language</mat-icon></button>-->
+          <button mat-icon-button matTooltip="Language" (click)=langDetect()><mat-icon>language</mat-icon></button>
+          <!-- help_outline / help / info_outline / info -->
+          <!--<button mat-icon-button matTooltip="Help" routerLink="help"><mat-icon>help</mat-icon></button>-->
+          <button mat-icon-button matTooltip="Help" (click)=openHelpAsModal()><mat-icon>help</mat-icon></button>
+          <!--<button mat-button>Login</button>-->
+          <!-- exit_to_app / account_box / account_circle / perm_identity / person / person_outline / supervisor_account -->
+          <button mat-icon-button matTooltip="Login"><mat-icon>account_circle</mat-icon></button>
         </div>
       <!--</div>-->
 

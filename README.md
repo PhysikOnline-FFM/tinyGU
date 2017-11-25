@@ -4,12 +4,12 @@
 - https://angular.io/
 - https://material.angular.io/
 - https://github.com/angular/flex-layout
-- https://github.com/trimox/angular-mdc-web (only for the mdc-textfield-box)
+- ~~https://github.com/trimox/angular-mdc-web (only for the mdc-textfield-box)~~
 
 ## Automatic deployment on GitHub Pages
 
-Demo at  
-https://physikonline-ffm.github.io/tinyGU
+**DEMO at
+https://physikonline-ffm.github.io/tinyGU**
 
 via Travis CI the Project is automatically built and pushed to the gh-pages branch. The .travis.yml-config file is in the root directoy.
 

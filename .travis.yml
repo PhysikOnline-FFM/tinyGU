@@ -47,8 +47,7 @@ notifications:
       # https://travis-encrypt.github.io/
       # travis encrypt "<account>:<token>" --add notifications.slack -r <accountName>/<repoName>
       # travis encrypt "<account>:<token>#<channel>" --add notifications.slack.rooms -r <accountName>/<repoName>
-      # TODO slack token in travis backend setzen
-      secure: "ObvimdNiDdb5NURHdyVfNN4VqWRxVM4EWsVkf7saPAH754yg2lYEnaKPqflUsbwpgpHzafsikRSR5t9bjs6JmilR6W1tTxNrbqNZWuQobv+tqMJFuWBbAVjCjlEjPiuK3ULxl+ekXSAhz0mXFweyrDpmA78OSvJY1d+fa3DqvdANQhHC/pAm3Lt20Nih4O06rIEnEbGobjELOIRaN5HmxEZcvoC+UDcMcRRoLLJBUPHyNxrvYiKYezrua+1wwAmA30aE/4Nr0v3Xzx/obieWgem0zvlsCpIhXIyyjQ7F3p9/IHImToGGouGj3ThQXE9N7wYujQuFXb0sSUEWBfucALPein4kEZfmsvF7nYlPjKfasl8f0sevg8UtDqpgBpzhwZZNJWIrDr46gIKIXNaYS8XHLeP1pXWKEgWPG5su93K6U0Az5YSJbaRkA4Peg2ZMOeLAf9iYiNEdkIsnVo+xPsBxk6A0K+vQrWEvBdfHIoUJeg8Lpxcr3A2dKgLTbMNUWJIMLBGHBCRD2E9aJ5s9hY2fGSBAenaoElSlhhlp5oHT+n3eabECLtutWzME6ROW5RAKc/K+1cuz7qJArjaoXQby1V5Jb/K7B1BwZgvKb2xmJMzy15VBURHVZioF16s+P05RY+rbRrx/ZajaQsMo9IhEcY8o6zEu18CbvwYr/Wo="
+      secure: ${SLACK_TOKEN}
       on_start: always
       on_failure: always
       on_success: always

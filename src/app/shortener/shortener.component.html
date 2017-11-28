@@ -1,5 +1,6 @@
 <div fxFill fxFlexFill fxLayoutAlign="start center" fxLayout="column">
   <div fxFlex="auto" fxHide.xs="true">
+    <!--TODO position fixed? relative?-->
     <img src="assets/link_icon.png" id="tinygu-logo">
   </div>
 
@@ -20,6 +21,7 @@
                      [formControl]="urlFormControl">
             <!--<mat-icon matSuffix>info</mat-icon>-->
           <!--</div>-->
+          <!--TODO trigger checking also for first time visit-->
           <mat-error *ngIf="urlFormControl.hasError('pattern')">
             Please enter a valid URL
           </mat-error>

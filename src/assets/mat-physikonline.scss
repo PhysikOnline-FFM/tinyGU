@@ -86,6 +86,7 @@ $candy-app-warn:    mat-palette($mat-pink);
 
 //$candy-app-background: mat-palette($mat-custom);
 
+// TODO dark or light theme?
 // Create the theme object (a Sass map containing all of the palettes).
 $candy-app-theme: mat-dark-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
 //$candy-app-theme: (

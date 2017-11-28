@@ -14,6 +14,8 @@ import { ShortenerComponent, LoginReminderDialogComponent } from './shortener/sh
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material';
+import { ApiService } from './services/api.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,7 @@ import { MatDialogModule } from '@angular/material';
     HelpComponent,
     ShortenerComponent,
     LoginReminderDialogComponent,
-    HelpModalComponent
+    HelpModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,12 +37,15 @@ import { MatDialogModule } from '@angular/material';
     ReactiveFormsModule,
     routing,
     MatDialogModule,
+    HttpClientModule,
   ],
   entryComponents: [
     LoginReminderDialogComponent,
-    HelpModalComponent
+    HelpModalComponent,
   ],
-  providers: [],
+  providers: [
+    ApiService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

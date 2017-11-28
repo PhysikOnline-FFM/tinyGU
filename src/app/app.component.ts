@@ -24,7 +24,7 @@ export class AppComponent {
   // https://zzz.buzz/2016/01/13/detect-browser-language-in-javascript/
   langDetect() {
     this.userLang = navigator.language; // || window.navigator.userLanguage;
-    alert(this.userLang);
+    alert('your language: \"' + this.userLang + '\"');
   }
 
   openHelpAsModal() {

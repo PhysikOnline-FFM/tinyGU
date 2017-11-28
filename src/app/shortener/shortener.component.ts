@@ -2,6 +2,8 @@ import { Component, OnInit, Inject, Input } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { ActivatedRoute } from '@angular/router';
+import { ApiService } from '../services/api.service';
+import { Link } from '../models/link';
 
 // some crazy page to generate the regex just with some samples!
 // http://txt2re.com http://regex.inginf.units.it/
@@ -23,11 +25,12 @@ const GOETHE_URL_REGEX = /^(?:.*\.|.*\/{2})?(?:uni\-frankfurt\.de|asta\-frankfur
   styleUrls: ['./shortener.component.scss']
 })
 export class ShortenerComponent implements OnInit {
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private api: ApiService) { }
 
   easteregg = false;
   moreOptions = false;
   inputURL = '';
+  shortURL = '';
   loggedInVar = false;
 
   urlFormControl = new FormControl('', [Validators.pattern(URL_REGEX), Validators.pattern((GOETHE_URL_REGEX))]);
@@ -36,11 +39,15 @@ export class ShortenerComponent implements OnInit {
   }
 
   onShorten() {
-    this.dialog.open(LoginReminderDialogComponent);
+    // this.dialog.open(LoginReminderDialogComponent);
+    // const link = new Link(this.inputURL, this.shortURL, null, null, null);
+    const link = new Link(this.inputURL, 'firstEverUniLink', null, 42, null);
+    this.api.createLink(link).subscribe( console.log );
   }
 
 }
 
+// TODO export to modal folder
 @Component({
   selector: 'app-login-reminder-dialog',
   template: `

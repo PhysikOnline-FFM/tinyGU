@@ -17,6 +17,7 @@ export class User {
   }
 
   static fromAPItype (r: UserAPImodel) {
+    if (!r) return;
     return new User(
       r.name,
       r.links.map(oneLink => Link.fromAPItype(oneLink)),

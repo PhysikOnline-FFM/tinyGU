@@ -3,9 +3,9 @@ import { User, UserAPImodel } from './user';
 export interface LinkAPImodel {
   longUrl: string;
   shortUrl: string;
-  owner: UserAPImodel;
-  id: number;
-  dateCreated: string;
+  owner?: UserAPImodel;
+  id?: number;
+  dateCreated?: string;
 }
 
 export class Link {
@@ -32,9 +32,9 @@ export class Link {
     return {
       longUrl: this.longUrl,
       shortUrl: this.shortUrl,
-      owner: this.owner.toAPItype(),
-      id: this.id,
-      dateCreated: this.dateCreated,
+      // owner: this.owner ? this.owner.toAPItype() : null,
+      // id: this.id,
+      // dateCreated: this.dateCreated,
     };
   }
 

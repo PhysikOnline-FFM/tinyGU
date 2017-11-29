@@ -31,23 +31,32 @@ script: # the build step
 #   - npm run build.prod
    - ng build --prod --base-href "https://physikonline-ffm.github.io/tinyGU/"
 
+#before_deploy:
+# http://www.backalleycoder.com/2016/05/13/sghpa-the-single-page-app-hack-for-github-pages/
+# https://stackoverflow.com/questions/5411538/redirect-from-an-html-page
+# wget -O $TRAVIS_BUILD_DIR gist to /dist + replace REPO_NAME in 404.html
+
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
   local_dir: dist
+  file:
   on:
 #    branch: master
     all_branches: true
 
 notifications:
   email: false
-  slack: # <USER>:<TOKEN>#<CHANNEL>
+  slack:  # <USER>:<TOKEN>#<CHANNEL>
     rooms:
       # https://travis-encrypt.github.io/
       # travis encrypt "<account>:<token>" --add notifications.slack -r <accountName>/<repoName>
       # travis encrypt "<account>:<token>#<channel>" --add notifications.slack.rooms -r <accountName>/<repoName>
-      secure: ${SLACK_TOKEN}
+      secure: "ENCRYPTED_KEY"
       on_start: always
       on_failure: always
       on_success: always
+      on_cancel: always
+      on_error: always
+      on_pull_requests: always

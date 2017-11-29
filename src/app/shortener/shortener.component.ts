@@ -4,6 +4,7 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from '../services/api.service';
 import { Link } from '../models/link';
+import { HttpResponseModalComponent } from '../modal/http-response-modal.component';
 
 // some crazy page to generate the regex just with some samples!
 // http://txt2re.com http://regex.inginf.units.it/
@@ -33,16 +34,61 @@ export class ShortenerComponent implements OnInit {
   shortURL = '';
   loggedInVar = false;
 
-  urlFormControl = new FormControl('', [Validators.pattern(URL_REGEX), Validators.pattern((GOETHE_URL_REGEX))]);
+  urlFormControl = new FormControl('', [Validators.pattern(URL_REGEX), Validators.pattern(GOETHE_URL_REGEX)]);
+  shortUrlFormControl = new FormControl('', Validators.minLength(2));
 
   ngOnInit() {
   }
 
   onShorten() {
-    // this.dialog.open(LoginReminderDialogComponent);
-    // const link = new Link(this.inputURL, this.shortURL, null, null, null);
-    const link = new Link(this.inputURL, 'firstEverUniLink', null, 42, null);
-    this.api.createLink(link).subscribe( console.log );
+    if (this.urlFormControl) {
+      const link = new Link( this.inputURL, this.shortURL, null, null, null );
+      let successMessage: string[]; // or any[] to process date?
+      // TODO error handling
+      // https://stackoverflow.com/questions/45066668/angular2-http-post-request-error
+      // https://stackoverflow.com/questions/41998222/best-practice-for-handling-error-in-angular2
+      // https://stackoverflow.com/questions/42104629/angular-2-checking-for-server-errors-from-subscribe
+      // https://angular.io/guide/http#!#always-handle-errors
+      // TODO is it safe to assume everything is ok and no errors occured when onNext is triggered?
+      // https://stackoverflow.com/a/42104835/7927273
+      // http://reactivex.io/documentation/operators/subscribe.html
+      this.api.createLink( link )
+          .subscribe(
+            data => {
+              console.log('onNext---->>>>>>>>>>>>>>>>>>>>');
+              console.log(data);
+              console.log(data.shortUrl);
+              successMessage = [data.longUrl, data.shortUrl, (data.owner ? '1' : '0'), data.dateCreated];
+              console.log('<<<<<<<<<<<<<<<<<<<<----onNext');
+            },
+            err => {
+              console.log('ERROR---->>>>>>>>>>>>>>>>>>>>');
+              console.error(err); // whole error; "err.error.error" -> actual error message; "err.message" -> generated error message
+              // this.dialog.open(LoginReminderDialogComponent);
+              this.dialog.open(HttpResponseModalComponent, {data: {errorMessage: err.error.error}});
+              console.log('<<<<<<<<<<<<<<<<<<<<----ERROR');
+            },
+            () => {
+              console.log('complete---->>>>>>>>>>>>>>>>>>>>');
+              console.log(successMessage);
+              // pass data to modal
+              // https://github.com/angular/material2/issues/2031
+              // https://github.com/angular/material2/blob/master/src/lib/dialog/dialog.ts#L44
+              // https://material.angular.io/components/dialog/overview
+              this.dialog.open(HttpResponseModalComponent, {data: {completeMessage: successMessage}});
+              console.log('<<<<<<<<<<<<<<<<<<<<----complete');
+            }
+           );
+      // if (!this.loggedInVar) this.dialog.open( LoginReminderDialogComponent );
+    } else {
+      // TODO input or inputError blinking, vibrating, animation....
+    }
+  }
+
+  onTest() {
+    // this.api.deleteLink(24).subscribe(console.log);
+    // this.api.getOneLink(1).subscribe(console.log);
+    // this.api.updateLink(new Link( this.inputURL, this.shortURL, null, 1, null ), 1).subscribe(console.log);
   }
 
 }

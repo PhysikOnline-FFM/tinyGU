@@ -13,7 +13,7 @@ $input-padding: 0px 0px 13.5px 16px;   //padding: 0px 0px 8px 16px;
 
 /deep/ .input-box  .mat-input-placeholder {
   padding: $input-padding;
-  position: initial !important;
+  position: initial;
 }
 
 /deep/ .mat-input-element{

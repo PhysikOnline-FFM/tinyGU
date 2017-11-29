@@ -16,9 +16,9 @@
           <!--TODO https://stackoverflow.com/questions/38145283/grow-width-of-input-on-focus-in-angular2-->
           <!--<div>-->
             <input matInput
-                     placeholder="http://example.uni-frankfurt.de/..."
-                     [(ngModel)]="inputURL"
-                     [formControl]="urlFormControl">
+                   placeholder="http://example.uni-frankfurt.de/..."
+                   [(ngModel)]="inputURL"
+                   [formControl]="urlFormControl">
             <!--<mat-icon matSuffix>info</mat-icon>-->
           <!--</div>-->
           <!--TODO trigger checking also for first time visit-->
@@ -36,12 +36,13 @@
     <!--</form >-->
 
     <div *ngIf="inputURL" fxLayout="column" fxLayoutAlign="start center" fxFlex="nogrow" fxFlexFill fxFlexOffset="4vh">
+    <!--<div *ngIf="true" fxLayout="column" fxLayoutAlign="start center" fxFlex="nogrow" fxFlexFill fxFlexOffset="4vh">-->
       <!--<p>{{ inputURL }}</p>--> <!--shows the inputURL content in a paragraph-->
 
       <div class="row-div">
         <div class="after-row-div" fxLayout="row" fxLayout.lt-sm="column" fxFlexOffset="25%" fxFlex="50" fxLayoutAlign="space-between">
           <button mat-raised-button color="accent" (click)="onShorten()">shorten</button>
-          <button mat-raised-button color="accent" (click)="moreOptions = !moreOptions">more options</button>
+          <button mat-raised-button color="raised" (click)="moreOptions = !moreOptions">more options</button>
         </div>
       </div>
 
@@ -51,8 +52,14 @@
         <div class="after-row-div" fxFlexAlign="center" fxFlex="50" fxFlex.lt-sm="90" fxLayout="row" fxLayout.lt-sm="column">
           <div fxFlex="grow">
             <mat-form-field floatPlaceholder="never" style="width: 100%">
-              <input matInput placeholder="custom url">
+              <input matInput
+                     placeholder="custom url"
+                     [(ngModel)]="shortURL"
+                     [formControl]="shortUrlFormControl" >
               <div matPrefix>goethe.link/</div>
+              <mat-error *ngIf="shortUrlFormControl.value">
+                short link is already taken
+              </mat-error>
             </mat-form-field>
           </div>
           <div fxFlex="none" fxFlexOffset="2vw">
@@ -66,7 +73,7 @@
           <button mat-raised-button>raised</button>
           <button mat-raised-button color="primary">r primary</button>
           <button mat-raised-button color="warn">r warn</button>
-          <button mat-raised-button color="accent">r accent</button>
+          <button mat-raised-button color="accent" (click)=onTest()>r accent</button>
           <button mat-button>mat button</button>
           <button class="mat-button">class matbtn</button>
           <button class="mat-button-toggle">c mb toogle</button>

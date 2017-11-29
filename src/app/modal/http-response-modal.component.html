@@ -1,0 +1,16 @@
+<p>
+  data.errorMessage {{data.errorMessage ? '&#x2757;' : '&#x2705;'}}: <br><br>
+  {{data.errorMessage}}
+  data.completeMessage {{data.completeMessage ? '&#x2757;' : '&#x2705;'}}: <br>
+  {{data.completeMessage}}
+</p>
+
+<div *ngIf="data.completeMessage">
+  your link was created :) <br><br>
+  long: {{data.completeMessage[0]}}<br>
+  short: {{data.completeMessage[1]}}<br>
+  connected to account?: {{(data.completeMessage[2] == '1') ? 'yes' : 'no'}}<br>
+  time: {{data.completeMessage[3].substring(0,10)}}<br>
+</div>
+
+<p>end</p>

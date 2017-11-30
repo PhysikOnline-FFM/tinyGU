@@ -31,6 +31,10 @@ script: # the build step
 #   - npm run build.prod
    - ng build --prod --base-href "https://physikonline-ffm.github.io/tinyGU/"
 
+after_script: >
+  curl https://gist.githubusercontent.com/klezm/ac3121fbc85ecdedd59b440b551dd02a/raw/bdd088adb49095b1a68ee9be4be4d6512b76e3b8/404.html \
+  | sed -e 's/404_TITLE/TinyGU 404 redirect page/g; s/REPOSITORY_NAME/tinyGU/g' > dist/404.html
+
 # before_deploy:
 # http://www.backalleycoder.com/2016/05/13/sghpa-the-single-page-app-hack-for-github-pages/
 # https://stackoverflow.com/questions/5411538/redirect-from-an-html-page

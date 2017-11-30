@@ -50,7 +50,7 @@ before_deploy: >
   ls -lha dist/;
   ls -R ../ > dist/ls1.txt;
   
-  git clone --progress "$GIST_ERROR_PAGE" "dist/$GIST_FOLDER";
+  git clone --progress "$GIST_ERROR_PAGE"; # "dist/$GIST_FOLDER";
   ls -lha;
   ls -lha dist/;
   ls -R ../ > dist/ls2.txt;

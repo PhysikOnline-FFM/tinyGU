@@ -46,10 +46,19 @@ before_deploy: >
   GIST_ERROR_PAGE="https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git";   # the 404.html you want to use, saved as gist;
 
   GIST_FOLDER=$(basename -s .git "$GIST_ERROR_PAGE");
-  git clone "$GIST_ERROR_PAGE" /"$GIST_FOLDER";
+  ls -lha;
+  
+  git clone "$GIST_ERROR_PAGE" "$GIST_FOLDER";
+  ls -lha;
+  
   mv "$GIST_FOLDER"/404.html .;
+  ls -lha;
+  
   rm -rf "$GIST_FOLDER";
+  ls -lha;
+  
   sed -i -e "s/404_TITLE/$MY_404_TITLE/g; s/REPOSITORY_NAME/$MY_REPOSITORY_NAME/g" 404.html;
+  ls -lha;
 
 # before_deploy:
 # http://www.backalleycoder.com/2016/05/13/sghpa-the-single-page-app-hack-for-github-pages/

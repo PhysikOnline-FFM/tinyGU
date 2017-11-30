@@ -1,0 +1,10 @@
+# https://git-scm.com/docs/gitattributes
+# https://stackoverflow.com/a/20653073/7927273
+# https://stackoverflow.com/questions/10418975/how-to-change-line-ending-settings
+
+# https://stackoverflow.com/questions/27810758/how-to-replace-crlf-with-lf-in-a-single-file
+# https://intellij-support.jetbrains.com/hc/en-us/community/posts/205969644-How-to-Ensure-Always-LF-not-CRLF-on-Windows
+#
+
+.travis.yml     eol=lf
+# core.autocrlf = input

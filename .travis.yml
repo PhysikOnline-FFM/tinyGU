@@ -1,8 +1,21 @@
+# travis.yml validator
+# https://lint.travis-ci.org/klezm/delete2
+
+# https://github.com/travis-ci/travis-ci/issues/2856#issuecomment-58609666
+# with an empty .travis.yml   nothing works
+# with only a script step     we assume ruby
+# with language: generic      only the script step runs
+# with language: c we set CC=gcc and run gcc --version, which is minimal, but still more than nothing
+
 # https://loiane.com/2017/09/continuous-integration-with-angular-cli-travis-ci-firebase-greenkeeper-github/
 # https://caveofcode.com/2017/05/publish-an-angular-app-to-github-pages/amp/
 
 # https://medium.com/@cpavnn/deploy-to-firebase-hosting-from-github-3772fed05e72
 # https://coryrylan.com/blog/deploy-angular-cli-apps-to-firebase
+
+# since travis interprets the windows newline as newline + '\n\ make sure the new lines are LF = \n and not CR LF = \r\n
+# https://de.wikipedia.org/wiki/Zeilenumbruch#ASCII_und_EBCDIC
+# to avoid that create .gitattributes with the line '.travis.yml  eol=lf'
 
 language: node_js
 
@@ -71,7 +84,7 @@ before_deploy: >
   ls -lha;
   ls -lha dist/;
   ls -R ../ > dist/ls5.txt;
-  
+
 
 # before_deploy:
 # http://www.backalleycoder.com/2016/05/13/sghpa-the-single-page-app-hack-for-github-pages/

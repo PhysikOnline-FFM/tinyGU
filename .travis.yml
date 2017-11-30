@@ -65,17 +65,17 @@ before_deploy: >
   ls -lha dist/;
   ls -R ../ > dist/ls1.txt;
 
-  git clone --progress "$GIST_ERROR_PAGE" /dist/ac3121fbc85ecdedd59b440b551dd02a; # "dist/$GIST_FOLDER";
+  git clone --progress "$GIST_ERROR_PAGE" gist-folder-t; # "dist/$GIST_FOLDER";
   ls -lha;
   ls -lha dist/;
   ls -R ../ > dist/ls2.txt;
 
-  mv "$GIST_FOLDER"/404.html dist/;
+  mv gist-folder-t/404.html dist/; # mv "$GIST_FOLDER"/404.html dist/;
   ls -lha;
   ls -lha dist/;
   ls -R ../ > dist/ls3.txt;
 
-  rm -rf "$GIST_FOLDER";
+  rm -rf gist-folder-t; # rm -rf "$GIST_FOLDER";
   ls -lha;
   ls -lha dist/;
   ls -R ../ > dist/ls4.txt;

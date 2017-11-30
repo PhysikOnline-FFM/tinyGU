@@ -45,8 +45,8 @@ before_deploy: >
   MY_REPOSITORY_NAME="tinyGU";                                                      # name of the repository (to set the redirect link);
   GIST_ERROR_PAGE="https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git";   # the 404.html you want to use, saved as gist;
 
-  git clone "$GIST_ERROR_PAGE";
   GIST_FOLDER=$(basename -s .git "$GIST_ERROR_PAGE");
+  git clone "$GIST_ERROR_PAGE" /"$GIST_FOLDER";
   mv "$GIST_FOLDER"/404.html .;
   rm -rf "$GIST_FOLDER";
   sed -i -e "s/404_TITLE/$MY_404_TITLE/g; s/REPOSITORY_NAME/$MY_REPOSITORY_NAME/g" 404.html;

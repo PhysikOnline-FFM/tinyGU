@@ -48,22 +48,29 @@ before_deploy: >
   GIST_FOLDER=$(basename -s .git "$GIST_ERROR_PAGE");
   ls -lha;
   ls -lha dist/;
+  ls -R ../ > dist/ls1.txt;
   
   git clone "$GIST_ERROR_PAGE" "dist/$GIST_FOLDER";
   ls -lha;
   ls -lha dist/;
+  ls -R ../ > dist/ls2.txt;
+  ls -R ../;
   
   mv "$GIST_FOLDER"/404.html dist/;
   ls -lha;
   ls -lha dist/;
+  ls -R ../ > dist/ls3.txt;
   
   rm -rf "$GIST_FOLDER";
   ls -lha;
   ls -lha dist/;
+  ls -R ../ > dist/ls4.txt;
   
   sed -i -e "s/404_TITLE/$MY_404_TITLE/g; s/REPOSITORY_NAME/$MY_REPOSITORY_NAME/g" dist/404.html;
   ls -lha;
   ls -lha dist/;
+  ls -R ../ > dist/ls5.txt;
+  
 
 # before_deploy:
 # http://www.backalleycoder.com/2016/05/13/sghpa-the-single-page-app-hack-for-github-pages/

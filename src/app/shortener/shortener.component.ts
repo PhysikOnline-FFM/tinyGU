@@ -64,6 +64,7 @@ export class ShortenerComponent implements OnInit {
             err => {
               console.log('ERROR---->>>>>>>>>>>>>>>>>>>>');
               console.error(err); // whole error; "err.error.error" -> actual error message; "err.message" -> generated error message
+              console.error(err.error.error);
               // this.dialog.open(LoginReminderDialogComponent);
               this.dialog.open(HttpResponseModalComponent, {data: {errorMessage: err.error.error}});
               console.log('<<<<<<<<<<<<<<<<<<<<----ERROR');

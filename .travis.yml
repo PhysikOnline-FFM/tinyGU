@@ -30,7 +30,14 @@ before_script: # commands to run before the build step
 script: # the build step
 #   - npm run build.prod
    - ng build --prod --base-href "https://physikonline-ffm.github.io/tinyGU/"
-   - curl https://gist.githubusercontent.com/klezm/ac3121fbc85ecdedd59b440b551dd02a/raw/bdd088adb49095b1a68ee9be4be4d6512b76e3b8/404.html | sed -e 's/404_TITLE/TinyGU 404 redirect page/g; s/REPOSITORY_NAME/tinyGU/g' > dist/404.html && cat dist/404.html
+   - MY_404_TITLE="TinyGU 404 redirect page" \
+     && MY_REPOSITORY_NAME="tinyGU" \
+     && curl https://gist.githubusercontent.com/klezm/ac3121fbc85ecdedd59b440b551dd02a/raw/bdd088adb49095b1a68ee9be4be4d6512b76e3b8/404.html \
+     | sed -e 's/404_TITLE/TinyGU 404 redirect page/g; s/REPOSITORY_NAME/tinyGU/g' \
+     > dist/404.html \
+     && cat dist/404.html \
+     && echo $MY_404_TITLE \
+     && echo "$MY_404_TITLE" \
 
 #before_deploy: >
 #  MY_404_TITLE="TinyGU 404 redirect page";

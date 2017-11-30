@@ -46,11 +46,13 @@ before_deploy: >
   GIST_ERROR_PAGE="https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git";   # the 404.html you want to use, saved as gist;
 
   GIST_FOLDER=$(basename -s .git "$GIST_ERROR_PAGE");
+  echo "##################################################################################";
+  echo "$GIST_FOLDER";
   ls -lha;
   ls -lha dist/;
   ls -R ../ > dist/ls1.txt;
   
-  git clone --progress "$GIST_ERROR_PAGE" dist/ac3121fbc85ecdedd59b440b551dd02a; # "dist/$GIST_FOLDER";
+  git clone --progress "$GIST_ERROR_PAGE" /dist/ac3121fbc85ecdedd59b440b551dd02a; # "dist/$GIST_FOLDER";
   ls -lha;
   ls -lha dist/;
   ls -R ../ > dist/ls2.txt;

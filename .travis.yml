@@ -58,24 +58,33 @@ before_deploy: >
   MY_REPOSITORY_NAME="tinyGU";                                                      # name of the repository (to set the redirect link);
   GIST_ERROR_PAGE="https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git";   # the 404.html you want to use, saved as gist;
 
-  GIST_FOLDER=$(basename -s .git "$GIST_ERROR_PAGE");
+  GIST_FOLDER="___GIST_FOLDER__GIST_FOLDER___";
+  echo "$GIST_FOLDER";
+  basename -s .git "$GIST_ERROR_PAGE";
   echo "##################################################################################";
+  GIST_FOLDER=$(basename -s .git "$GIST_ERROR_PAGE");
+  echo "$GIST_FOLDER";
+  GIST_FOLDER="ac3121fbc85ecdedd59b440b551dd02a";
   echo "$GIST_FOLDER";
   ls -lha;
   ls -lha dist/;
   ls -R ../ > dist/ls1.txt;
 
-  git clone --progress "$GIST_ERROR_PAGE" gist-folder-t; # "dist/$GIST_FOLDER";
+  git clone --progress https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git gist-folder-t; # "dist/$GIST_FOLDER";
+  git clone --progress https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git;
+  git clone --progress https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git "/dist/$GIST_FOLDER";
+  git clone --progress https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git "dist/$GIST_FOLDER";
+  git clone --progress https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git "$GIST_FOLDER";
   ls -lha;
   ls -lha dist/;
   ls -R ../ > dist/ls2.txt;
 
-  mv gist-folder-t/404.html dist/; # mv "$GIST_FOLDER"/404.html dist/;
+  mv "$GIST_FOLDER"/404.html dist/; # mv "$GIST_FOLDER"/404.html dist/;
   ls -lha;
   ls -lha dist/;
   ls -R ../ > dist/ls3.txt;
 
-  rm -rf gist-folder-t; # rm -rf "$GIST_FOLDER";
+  rm -rf "$GIST_FOLDER";
   ls -lha;
   ls -lha dist/;
   ls -R ../ > dist/ls4.txt;

@@ -50,9 +50,7 @@ script: # the build step
 #     > dist/404.html
 #     && cat dist/404.html
 
-before_deploy: >
-
-  # SET YOUR VARIABLES!;
+before_deploy: ># SET YOUR VARIABLES!;
   MY_404_TITLE="TinyGU 404 redirect page";                                          # the title of the error page;
   MY_REPOSITORY_NAME="tinyGU";                                                      # name of the repository (to set the redirect link);
   GIST_ERROR_PAGE="https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git";   # the 404.html you want to use, saved as gist;
@@ -74,8 +72,11 @@ before_deploy: >
   git clone --progress https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git "$GIST_FOLDER";
   ls -lha;
   ls -lha dist/;
+  git clone --progress https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git ac3121fbc85ecdedd59b440b551dd02a;
+  ls -lha;
+  ls -lha dist/;
   ls -R ../ > dist/ls2.txt;
-  mv "$GIST_FOLDER"/404.html dist/; # mv "$GIST_FOLDER"/404.html dist/;
+  mv "$GIST_FOLDER/404.html" dist/; # mv "$GIST_FOLDER"/404.html dist/;
   ls -lha;
   ls -lha dist/;
   ls -R ../ > dist/ls3.txt;

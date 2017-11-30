@@ -29,7 +29,7 @@ ls -lha;
 ls -lha dist/;
 #ls -R ../ > dist/ls4.txt;
 
-cat -n "$GIST_FOLDER/404.html";
+cat -n dist/404.html;
 
 sed -i -e "s/404_TITLE/$MY_404_TITLE/g; s/REPOSITORY_NAME/$MY_REPOSITORY_NAME/g" dist/404.html;
 echo "sed >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>";
@@ -37,4 +37,4 @@ ls -lha;
 ls -lha dist/;
 #ls -R ../ > dist/ls5.txt;
 
-cat -n "$GIST_FOLDER/404.html";
+cat -n dist/404.html;

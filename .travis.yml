@@ -18,6 +18,8 @@
 # https://de.wikipedia.org/wiki/Zeilenumbruch#ASCII_und_EBCDIC
 # to avoid that create .gitattributes with the line '.travis.yml  eol=lf'
 
+# https://github.com/dwyl/learn-travis
+
 language: node_js
 
 node_js:
@@ -51,70 +53,70 @@ script: # the build step
 #     > dist/404.html
 #     && cat dist/404.html
 
-before_deploy: >
+before_deploy: ./before_deploy.travis.sh
 
-  # SET YOUR VARIABLES!;
-  MY_404_TITLE="TinyGU 404 redirect page";                                          # the title of the error page;
-  MY_REPOSITORY_NAME="tinyGU";                                                      # name of the repository (to set the redirect link);
-  GIST_ERROR_PAGE="https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git";   # the 404.html you want to use, saved as gist;
-  GIST_FOLDER="___GIST_FOLDER__GIST_FOLDER___";
-  echo "$GIST_FOLDER";
-
-  #break;
-  basename -s .git "$GIST_ERROR_PAGE";
-  echo "##################################################################################";
-  GIST_FOLDER=$(basename -s .git "$GIST_ERROR_PAGE");
-  echo "$GIST_FOLDER";
-  GIST_FOLDER="ac3121fbc85ecdedd59b440b551dd02a";
-  echo "$GIST_FOLDER";
-
-  #break;
-  ls -lha;
-  ls -lha dist/;
-  ls -R ../ > dist/ls1.txt;
-
-  #break;
-  git clone --progress https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git gist-folder-t; # "dist/$GIST_FOLDER";
-
-  #break;
-  git clone --progress https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git;
-
-  #break;
-  git clone --progress https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git "/dist/$GIST_FOLDER";
-
-  #break;
-  git clone --progress https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git "dist/$GIST_FOLDER";
-
-  #break;
-  git clone --progress https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git "$GIST_FOLDER";
-
-  #break;
-  ls -lha;
-  ls -lha dist/;
-
-  #break;
-  git clone --progress https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git ac3121fbc85ecdedd59b440b551dd02a;
-  ls -lha;
-  ls -lha dist/;
-  ls -R ../ > dist/ls2.txt;
-
-  #break;
-  mv "$GIST_FOLDER/404.html" dist/; # mv "$GIST_FOLDER"/404.html dist/;
-  ls -lha;
-  ls -lha dist/;
-  ls -R ../ > dist/ls3.txt;
-
-  #break;
-  rm -rf "$GIST_FOLDER";
-  ls -lha;
-  ls -lha dist/;
-  ls -R ../ > dist/ls4.txt;
-
-  #break;
-  sed -i -e "s/404_TITLE/$MY_404_TITLE/g; s/REPOSITORY_NAME/$MY_REPOSITORY_NAME/g" dist/404.html;
-  ls -lha;
-  ls -lha dist/;
-  ls -R ../ > dist/ls5.txt;
+#  # SET YOUR VARIABLES!;
+#  MY_404_TITLE="TinyGU 404 redirect page";                                          # the title of the error page;
+#  MY_REPOSITORY_NAME="tinyGU";                                                      # name of the repository (to set the redirect link);
+#  GIST_ERROR_PAGE="https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git";   # the 404.html you want to use, saved as gist;
+#  GIST_FOLDER="___GIST_FOLDER__GIST_FOLDER___";
+#  echo "$GIST_FOLDER";
+#
+#  #break;
+#  basename -s .git "$GIST_ERROR_PAGE";
+#  echo "##################################################################################";
+#  GIST_FOLDER=$(basename -s .git "$GIST_ERROR_PAGE");
+#  echo "$GIST_FOLDER";
+#  GIST_FOLDER="ac3121fbc85ecdedd59b440b551dd02a";
+#  echo "$GIST_FOLDER";
+#
+#  #break;
+#  ls -lha;
+#  ls -lha dist/;
+#  ls -R ../ > dist/ls1.txt;
+#
+#  #break;
+#  git clone --progress https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git gist-folder-t; # "dist/$GIST_FOLDER";
+#
+#  #break;
+#  git clone --progress https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git;
+#
+#  #break;
+#  git clone --progress https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git "/dist/$GIST_FOLDER";
+#
+#  #break;
+#  git clone --progress https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git "dist/$GIST_FOLDER";
+#
+#  #break;
+#  git clone --progress https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git "$GIST_FOLDER";
+#
+#  #break;
+#  ls -lha;
+#  ls -lha dist/;
+#
+#  #break;
+#  git clone --progress https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git ac3121fbc85ecdedd59b440b551dd02a;
+#  ls -lha;
+#  ls -lha dist/;
+#  ls -R ../ > dist/ls2.txt;
+#
+#  #break;
+#  mv "$GIST_FOLDER/404.html" dist/; # mv "$GIST_FOLDER"/404.html dist/;
+#  ls -lha;
+#  ls -lha dist/;
+#  ls -R ../ > dist/ls3.txt;
+#
+#  #break;
+#  rm -rf "$GIST_FOLDER";
+#  ls -lha;
+#  ls -lha dist/;
+#  ls -R ../ > dist/ls4.txt;
+#
+#  #break;
+#  sed -i -e "s/404_TITLE/$MY_404_TITLE/g; s/REPOSITORY_NAME/$MY_REPOSITORY_NAME/g" dist/404.html;
+#  ls -lha;
+#  ls -lha dist/;
+#  ls -R ../ > dist/ls5.txt;
 
 
 # before_deploy:

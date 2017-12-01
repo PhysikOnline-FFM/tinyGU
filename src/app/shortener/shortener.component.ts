@@ -33,7 +33,6 @@ export class ShortenerComponent implements OnInit {
   inputURL = '';
   shortURL = '';
   loggedInVar = false;
-  readyToGo = false;
 
   urlFormControl = new FormControl('', [Validators.pattern(URL_REGEX), Validators.pattern(GOETHE_URL_REGEX)]);
   // urlFormControl = new FormControl('inputURL', [Validators.pattern(URL_REGEX), Validators.pattern(GOETHE_URL_REGEX)]);
@@ -43,8 +42,8 @@ export class ShortenerComponent implements OnInit {
   }
 
   onShorten() {
-    // console.log('urlFormControl -->', !this.urlFormControl.hasError('pattern'), '###################');
-    // console.log('shortUrlFormControl -->', !this.shortUrlFormControl.hasError('minlength'), '###################');
+    console.log('urlFormControl -->', !this.urlFormControl.hasError('pattern'), '###################');
+    console.log('shortUrlFormControl -->', !this.shortUrlFormControl.hasError('minlength'), '###################');
     if (!this.urlFormControl.hasError('pattern') && !this.shortUrlFormControl.hasError('minlength')) {
       const link = new Link( this.inputURL, this.shortURL, null, null, null );
       let successMessage: string[]; // or any[] to process date?

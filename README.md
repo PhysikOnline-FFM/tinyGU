@@ -8,6 +8,7 @@
 
 ## Automatic deployment on GitHub Pages
 
+[![Build Status](https://travis-ci.org/PhysikOnline-FFM/tinyGU.svg)](https://travis-ci.org/PhysikOnline-FFM/tinyGU)
 **DEMO at
 https://physikonline-ffm.github.io/tinyGU**
 

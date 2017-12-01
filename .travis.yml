@@ -1,5 +1,5 @@
 # travis.yml validator
-# https://lint.travis-ci.org/klezm/delete2
+# https://lint.travis-ci.org/PhysikOnline-FFM/tinyGU
 
 # https://github.com/travis-ci/travis-ci/issues/2856#issuecomment-58609666
 # with an empty .travis.yml   nothing works
@@ -49,7 +49,7 @@ script: # the build step
    - chmod +x ./before_deploy.travis.sh
 #   - MY_404_TITLE="TinyGU 404 redirect page"
 #     && MY_REPOSITORY_NAME="tinyGU"
-#     && curl https://gist.githubusercontent.com/klezm/ac3121fbc85ecdedd59b440b551dd02a/raw/bdd088adb49095b1a68ee9be4be4d6512b76e3b8/404.html
+#     && curl https://gist....404.html
 #     | sed -e "s/404_TITLE/$MY_404_TITLE/g; s/REPOSITORY_NAME/$MY_REPOSITORY_NAME/g"
 #     > dist/404.html
 #     && cat dist/404.html
@@ -126,7 +126,7 @@ before_deploy: ./before_deploy.travis.sh
 # wget -O $TRAVIS_BUILD_DIR gist to /dist + replace REPO_NAME in 404.html
 
 # get https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git
-#   - wget -O $TRAVIS_BUILD_DIR https://gist.githubusercontent.com/klezm/ac3121fbc85ecdedd59b440b551dd02a/raw/bdd088adb49095b1a68ee9be4be4d6512b76e3b8/404.html
+#   - wget -O $TRAVIS_BUILD_DIR https://gist....404.html
 # https://stackoverflow.com/questions/13210880/replace-one-substring-for-another-string-in-shell-script
 # https://stackoverflow.com/questions/2871181/replacing-some-characters-in-a-string-with-another-character
 # https://stackoverflow.com/questions/47228723/how-to-pass-to-curl-file-with-replace-some-sequence

@@ -17,6 +17,7 @@ import { MatDialogModule } from '@angular/material';
 import { ApiService } from './services/api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpResponseModalComponent } from './modal/http-response-modal.component';
+import { LoginReminderModalComponent } from './modal/login-reminder-modal.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { HttpResponseModalComponent } from './modal/http-response-modal.componen
     HttpResponseModalComponent,
     HelpModalComponent,
     HttpResponseModalComponent,
+    LoginReminderModalComponent,
   ],
   imports: [
     BrowserModule,

@@ -44,7 +44,7 @@ redirectScript='\
       }\
     })();\
   </script>'
-sed -i "/<\/body>/ i $redirectScript" index.html
+sed -i "/<\/body>/ i $redirectScript" dist/index.html
 cat -n dist/index.html
 #ls -lha;
 #ls -lha dist/;

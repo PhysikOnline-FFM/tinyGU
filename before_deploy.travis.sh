@@ -30,6 +30,21 @@ ls -lha;
 echo "sed >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>";
 cat -n dist/404.html;
 sed -i -e "s/404_TITLE/$MY_404_TITLE/g; s/REPOSITORY_NAME/$MY_REPOSITORY_NAME/g" dist/404.html;
+sed -i "/<\/title>/ a <script>sessionStorage.redirect = location.href;</script>" dist/404.html
 cat -n dist/404.html;
+
+cat -n dist/index.html
+redirectScript='\
+  <script>\
+    (function(){\
+      var redirect = sessionStorage.redirect;\
+      delete sessionStorage.redirect;\
+      if (redirect && redirect != location.href) {\
+        history.replaceState(null, null, redirect);\
+      }\
+    })();\
+  </script>'
+sed -i "/<\/body>/ i $redirectScript" index.html
+cat -n dist/index.html
 #ls -lha;
 #ls -lha dist/;

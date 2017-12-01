@@ -42,6 +42,7 @@
       <div class="row-div">
         <div class="after-row-div" fxLayout="row" fxLayout.lt-sm="column" fxFlexOffset="25%" fxFlex="50" fxLayoutAlign="space-between">
           <button mat-raised-button color="accent" (click)="onShorten()">shorten</button>
+          <!--<button mat-raised-button color="accent" (click)="onShorten()" [disabled]="urlFormControl.hasError">shorten</button>-->
           <button mat-raised-button color="raised" (click)="moreOptions = !moreOptions">more options</button>
         </div>
       </div>

@@ -46,90 +46,17 @@ before_script: # commands to run before the build step
 #   - ./before_script.travis.sh $TRAVIS_REPO_SLUG
 
 script: # the build step
-#   - npm run build.prod
    - ng build --prod --base-href "https://physikonline-ffm.github.io/tinyGU/"
-   - chmod +x ./before_deploy.travis.sh
-#   - MY_404_TITLE="TinyGU 404 redirect page"
-#     && MY_REPOSITORY_NAME="tinyGU"
-#     && curl https://gist....404.html
-#     | sed -e "s/404_TITLE/$MY_404_TITLE/g; s/REPOSITORY_NAME/$MY_REPOSITORY_NAME/g"
-#     > dist/404.html
-#     && cat dist/404.html
+#   - npm run build.prod
 
-before_deploy:
-   - ./before_deploy.travis.sh
+#before_deploy:
+#   - chmod +x ./before_deploy.travis.sh
+#   - ./before_deploy.travis.sh
 
-#  # SET YOUR VARIABLES!;
-#  MY_404_TITLE="TinyGU 404 redirect page";                                          # the title of the error page;
-#  MY_REPOSITORY_NAME="tinyGU";                                                      # name of the repository (to set the redirect link);
-#  GIST_ERROR_PAGE="https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git";   # the 404.html you want to use, saved as gist;
-#  GIST_FOLDER="___GIST_FOLDER__GIST_FOLDER___";
-#  echo "$GIST_FOLDER";
-#
-#  #break;
-#  basename -s .git "$GIST_ERROR_PAGE";
-#  echo "##################################################################################";
-#  GIST_FOLDER=$(basename -s .git "$GIST_ERROR_PAGE");
-#  echo "$GIST_FOLDER";
-#  GIST_FOLDER="ac3121fbc85ecdedd59b440b551dd02a";
-#  echo "$GIST_FOLDER";
-#
-#  #break;
-#  ls -lha;
-#  ls -lha dist/;
-#  ls -R ../ > dist/ls1.txt;
-#
-#  #break;
-#  git clone --progress https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git gist-folder-t; # "dist/$GIST_FOLDER";
-#
-#  #break;
-#  git clone --progress https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git;
-#
-#  #break;
-#  git clone --progress https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git "/dist/$GIST_FOLDER";
-#
-#  #break;
-#  git clone --progress https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git "dist/$GIST_FOLDER";
-#
-#  #break;
-#  git clone --progress https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git "$GIST_FOLDER";
-#
-#  #break;
-#  ls -lha;
-#  ls -lha dist/;
-#
-#  #break;
-#  git clone --progress https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git ac3121fbc85ecdedd59b440b551dd02a;
-#  ls -lha;
-#  ls -lha dist/;
-#  ls -R ../ > dist/ls2.txt;
-#
-#  #break;
-#  mv "$GIST_FOLDER/404.html" dist/; # mv "$GIST_FOLDER"/404.html dist/;
-#  ls -lha;
-#  ls -lha dist/;
-#  ls -R ../ > dist/ls3.txt;
-#
-#  #break;
-#  rm -rf "$GIST_FOLDER";
-#  ls -lha;
-#  ls -lha dist/;
-#  ls -R ../ > dist/ls4.txt;
-#
-#  #break;
-#  sed -i -e "s/404_TITLE/$MY_404_TITLE/g; s/REPOSITORY_NAME/$MY_REPOSITORY_NAME/g" dist/404.html;
-#  ls -lha;
-#  ls -lha dist/;
-#  ls -R ../ > dist/ls5.txt;
-
-
-# before_deploy:
 # http://www.backalleycoder.com/2016/05/13/sghpa-the-single-page-app-hack-for-github-pages/
 # https://stackoverflow.com/questions/5411538/redirect-from-an-html-page
-# wget -O $TRAVIS_BUILD_DIR gist to /dist + replace REPO_NAME in 404.html
 
 # get https://gist.github.com/ac3121fbc85ecdedd59b440b551dd02a.git
-#   - wget -O $TRAVIS_BUILD_DIR https://gist....404.html
 # https://stackoverflow.com/questions/13210880/replace-one-substring-for-another-string-in-shell-script
 # https://stackoverflow.com/questions/2871181/replacing-some-characters-in-a-string-with-another-character
 # https://stackoverflow.com/questions/47228723/how-to-pass-to-curl-file-with-replace-some-sequence

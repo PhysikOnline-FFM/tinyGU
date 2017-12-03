@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
+# https://github.com/catdad/fork-ribbon-css-builder
 # https://github.com/codepo8/css-fork-on-github-ribbon
 # https://github.com/azu/github-ribbon-generator
 # https://github.com/simonwhitaker/github-fork-ribbon-css
-# https://github.com/catdad/fork-ribbon-css-builder
 
 # SET YOUR VARIABLES!
 MY_404_TITLE="TinyGU 404 redirect page";                                          # the title of the error page

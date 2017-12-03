@@ -41,7 +41,7 @@ cat -n dist/404.html;
 cat -n dist/index.html
 #redirectScript="<script>(function(){var redirect = sessionStorage.redirect;delete sessionStorage.redirect;if (redirect && redirect != location.href) {history.replaceState(null, null, redirect);}})();</script>"
 #sed -i "/<\/body>/ i $redirectScript" dist/index.html
-#sed -i "/<\/body>/ i <script>(function(){var redirect = sessionStorage.redirect;delete sessionStorage.redirect;if (redirect && redirect != location.href) {history.replaceState(null, null, redirect);}})();</script>" dist/index.html
+sed -i "/<\/body>/ i <script>(function(){var redirect = sessionStorage.redirect;delete sessionStorage.redirect;if (redirect && redirect != location.href) {history.replaceState(null, null, redirect);}})();</script>" dist/index.html
 cat -n dist/index.html
 #ls -lha;
 #ls -lha dist/;

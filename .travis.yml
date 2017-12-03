@@ -49,9 +49,9 @@ script: # the build step
    - ng build --prod --base-href "https://physikonline-ffm.github.io/tinyGU/"
 #   - npm run build.prod
 
-#before_deploy:
-#   - chmod +x ./before_deploy.travis.sh
-#   - ./before_deploy.travis.sh
+before_deploy:
+   - chmod +x ./before_deploy.travis.sh
+   - ./before_deploy.travis.sh
 
 # http://www.backalleycoder.com/2016/05/13/sghpa-the-single-page-app-hack-for-github-pages/
 # https://stackoverflow.com/questions/5411538/redirect-from-an-html-page

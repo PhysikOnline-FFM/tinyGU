@@ -39,9 +39,9 @@ sed -i "/<\/title>/ a <script>sessionStorage.redirect = location.href;</script>"
 cat -n dist/404.html;
 
 cat -n dist/index.html
-#redirectScript="<script>(function(){var redirect = sessionStorage.redirect;delete sessionStorage.redirect;if (redirect && redirect != location.href) {history.replaceState(null, null, redirect);}})();</script>"
+redirectScript="<script>(function(){var redirect = sessionStorage.redirect;delete sessionStorage.redirect;if (redirect && redirect != location.href) {history.replaceState(null, null, redirect);}})();</script>"
 sed -i "/<\/body>/$redirectScript<\/body>/g" dist/index.html
-#sed -i "/<\/body>/ a <script>(function(){var redirect = sessionStorage.redirect;delete sessionStorage.redirect;if (redirect && redirect != location.href) {history.replaceState(null, null, redirect);}})();</script>" dist/index.html
+#sed -i "/<\/body>/ a $redirectScript" dist/index.html # not working with append or insert, becuase the index.html has only one line
 cat -n dist/index.html
 #ls -lha;
 #ls -lha dist/;

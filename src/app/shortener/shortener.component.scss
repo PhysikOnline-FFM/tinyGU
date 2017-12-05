@@ -2,21 +2,21 @@
 
 $input-padding: 0px 0px 13.5px 16px;   //padding: 0px 0px 8px 16px;
 
-/deep/ .input-box .mat-input-infix {
-  @extend .mat-elevation-z8;
-  background-color: rgba(255, 255, 255, 0.4);
-  padding: $input-padding;
-  border-radius: 4px 4px 0 0;
-  //@extend .mat-elevation-z5;
-  //height: 28px;
+::ng-deep .input-box .mat-input-infix { //use ::ng-deep instead of /deep/ since /deep/ and >>> are deprecated
+      @extend .mat-elevation-z8;
+      background-color: rgba(255, 255, 255, 0.4);
+      padding: $input-padding;
+      border-radius: 4px 4px 0 0;
+      //@extend .mat-elevation-z5;
+      //height: 28px;
 }
 
-/deep/ .input-box  .mat-input-placeholder {
+::ng-deep .input-box  .mat-input-placeholder {
   padding: $input-padding;
   position: initial;
 }
 
-/deep/ .mat-input-element{
+::ng-deep .mat-input-element{
   //padding: 8px !important;
 }
 

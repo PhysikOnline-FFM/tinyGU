@@ -35,3 +35,15 @@ Alternatively when using Webstorm, you can set up a run command. Open "edit conf
 ### Build Angular App
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+### update Angular
+to update Angular: https://angular-update-guide.firebaseapp.com/
+
+`npm outdated` and `npm update` are very handy commands  
+
+replace the version number `@'^5.0.0'` with `@latest` and probably add --save to the end of the command.
+On windows run cmd as admin!
+
+to update Angular-CLI: https://github.com/angular/angular-cli#updating-angular-cli
+
+if webpack is missing (`ng version`) install it with `npm install --save-dev webpack` 

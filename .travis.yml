@@ -29,7 +29,10 @@ branches:
     only:
       - prototype
       - master
-# +    - /^greenkeeper/.*$/
+      - /^greenkeeper/.*$/
+#    except:
+#      - master.ng5
+#      - prototype
 
 cache:
   directories:

@@ -13,7 +13,8 @@
          routerLink
          [routerLink]="['/']"
          (click)="start.close()"
-          style="padding: 0px 2em;"> <!--TODO inline style-->
+         style="padding: 0px 2em;"
+         i18n="#TinyGU# the title of the app@@app.tinyGU"> <!--TODO inline style-->
         TinyGU
       </p>
 
@@ -43,7 +44,7 @@
             <mat-icon>menu</mat-icon>
           </button>
 
-          <span>TinyGU</span>
+          <span i18n="@@app.tinyGU">TinyGU</span>
         </div>
 
         <div fxFlex="1 1 auto"></div>

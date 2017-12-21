@@ -47,3 +47,8 @@ On windows run cmd as admin!
 to update Angular-CLI: https://github.com/angular/angular-cli#updating-angular-cli
 
 if webpack is missing (`ng version`) install it with `npm install --save-dev webpack` 
+
+### i18n
+
+to generate the source file:
+`ng xi18n --locale en-US --i18nFormat=xlf --outputPath src/locale --app tinyGU --out-file messages_en-US` 

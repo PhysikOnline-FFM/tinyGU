@@ -54,8 +54,8 @@ before_script: # commands to run before the build step
    - npm install
    - chmod +x ./before_script.travis.sh
    - ./before_script.travis.sh $TRAVIS_REPO_SLUG
-   - travis encrypt "physikonline:$SLACK_TRAVIS_TOKEN#travisci" --add notifications.slack.rooms
-   - cat .travis.yml
+#   - travis encrypt "physikonline:$SLACK_TRAVIS_TOKEN#travisci" --add notifications.slack.rooms
+#   - cat .travis.yml
 
 script: # the build step
    - ng build --prod --base-href "https://physikonline-ffm.github.io/tinyGU/"
@@ -95,7 +95,7 @@ notifications:
       # https://travis-encrypt.github.io/
       # travis encrypt "<account>:<token>" --add notifications.slack -r <accountName>/<repoName>
       # travis encrypt "<account>:<token>#<channel>" --add notifications.slack.rooms -r <accountName>/<repoName>
-      secure: "SECRET_SLACK_KEY"
+      secure: "AMhxSZXy7kkjzd1+n0p+0uEvk0gEmEYJgIyUHEFH6z4sG9XbDa33/IrA7F6nenJ1us4zrXkSepOUc24dDCYYnAkHoxzTe0mOlNGMgK4TFLXxJD9jtzV5GG6PPaa8lWnWeNKLR1meRhSB3HBYDSpoSYwcCVxdPPA5fFBZ4CITyjL/TsEusUADUaHZrZhdyl3Xy6mpTM8ilens1FClh4W5xHDlI3tRVhx8QgFmm4CX9SRGS5ooZcavgFca5qvUhaXQPplDqyBXIwmMiZNaJf40IBSHUzSHkRV8SIkLijkmIrI7iRmpyhW5ZltKKYClqqhgzv/DsuDasWY62nKuOLKt+9ogMNACwsR6jtksTOQemo0mMKEoPgxuBO1vgMYCLiWxzrXeys1NAXnSOIQEoIg34ivClVyIqkPDe9OFaGHKaglhqTU5ppbBbHnavxEUMI1OFb98di0GOKqTu4oRQRfFUJMj5j82Ofs/V7oxrQe9BCs5OAQ9FOrnGwaoLUVBkkxWnU7IKnHw6uW4M/ZJ7GjpWMCBbQ1LAIlBXfoIgk/exLfAp8ZSWQNr8yCgvK/UYEqn4TgT8ZNRrJAUZzsfoXEJfufOwcQ476WwRQORjufTYiTD+BWfnAgmAChMskxQWOQzVhhWriRZATt6omeLWLGoLxT80LxrMm9KZ966kkh3XOM="
       on_start: always
       on_failure: always
       on_success: always

@@ -9,6 +9,7 @@ export class HelpComponent implements OnInit {
 
   constructor() { }
 
+  // TODO i18n
   whiteList = [
     { url: 'uni-frankfurt.de',
       description: 'Alle Seiten innerhalb der Goethe-Universität' },

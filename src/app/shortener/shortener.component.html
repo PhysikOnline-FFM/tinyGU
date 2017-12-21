@@ -23,7 +23,9 @@
           <!--</div>-->
           <!--TODO trigger checking also for first time visit-->
           <mat-error *ngIf="urlFormControl.hasError('pattern')">
-            Please enter a valid URL
+            <ng-container i18n="@@shortener.enterValidURL">
+              Please enter a valid URL
+            </ng-container>
           </mat-error>
         </mat-form-field>
       </div>
@@ -41,9 +43,13 @@
 
       <div class="row-div">
         <div class="after-row-div" fxLayout="row" fxLayout.lt-sm="column" fxFlexOffset="25%" fxFlex="50" fxLayoutAlign="space-between">
-          <button mat-raised-button color="accent" (click)="onShorten()">shorten</button>
+          <button mat-raised-button color="accent" (click)="onShorten()" i18n="shorten command on Button@@shortener.btnShorten">
+            shorten
+          </button>
           <!--<button mat-raised-button color="accent" (click)="onShorten()" [disabled]="urlFormControl.hasError">shorten</button>-->
-          <button mat-raised-button color="raised" (click)="moreOptions = !moreOptions">more options</button>
+          <button mat-raised-button color="raised" (click)="moreOptions = !moreOptions" i18n="@@shortener.btnMore">
+            more options
+          </button>
         </div>
       </div>
 
@@ -59,12 +65,16 @@
                      [formControl]="shortUrlFormControl" >
               <div matPrefix>goethe.link/</div>
               <mat-error *ngIf="shortUrlFormControl.value">
-                short link is already taken
+                <ng-container i18n="chosen shortlink is already taken@@shortener.linkTaken">
+                  short link is already taken
+                </ng-container>
               </mat-error>
             </mat-form-field>
           </div>
           <div fxFlex="none" fxFlexOffset="2vw">
-            <button mat-raised-button color="accent" (click)="easteregg = !easteregg">add to account</button>
+            <button mat-raised-button color="accent" (click)="easteregg = !easteregg" i18n="@@shortener.btnAddToAcc">
+              add to account
+            </button>
           </div>
         </div>
       </div>

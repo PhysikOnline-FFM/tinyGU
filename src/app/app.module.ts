@@ -9,7 +9,7 @@ import { AboutComponent } from './about/about.component';
 import { AccountComponent } from './account/account.component';
 import { HelpComponent } from './help/help.component';
 import { routing } from './app.routing';
-import { ShortenerComponent, LoginReminderDialogComponent } from './shortener/shortener.component';
+import { ShortenerComponent} from './shortener/shortener.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material';
@@ -25,10 +25,8 @@ import { LoginReminderModalComponent } from './modal/login-reminder-modal.compon
     AccountComponent,
     HelpComponent,
     ShortenerComponent,
-    LoginReminderDialogComponent,
     HttpResponseModalComponent,
     HelpModalComponent,
-    HttpResponseModalComponent,
     LoginReminderModalComponent,
   ],
   imports: [
@@ -43,9 +41,9 @@ import { LoginReminderModalComponent } from './modal/login-reminder-modal.compon
     HttpClientModule,
   ],
   entryComponents: [
-    LoginReminderDialogComponent,
     HttpResponseModalComponent,
     HelpModalComponent,
+    LoginReminderModalComponent,
   ],
   providers: [
     ApiService,

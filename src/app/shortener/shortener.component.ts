@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ApiService } from '../services/api.service';
 import { Link } from '../models/link';
 import { HttpResponseModalComponent } from '../modal/http-response-modal.component';
+import { LoginReminderModalComponent } from '../modal/login-reminder-modal.component';
 
 // some crazy page to generate the regex just with some samples!
 // http://txt2re.com http://regex.inginf.units.it/
@@ -68,7 +69,7 @@ export class ShortenerComponent implements OnInit {
               console.log('ERROR---->>>>>>>>>>>>>>>>>>>>');
               console.error(err); // whole error; "err.error.error" -> actual error message; "err.message" -> generated error message
               console.error(err.error.error);
-              // this.dialog.open(LoginReminderDialogComponent);
+              // this.dialog.open(LoginReminderModalComponent);
               this.dialog.open(HttpResponseModalComponent, {data: {errorMessage: err.error.error}});
               console.log('<<<<<<<<<<<<<<<<<<<<----ERROR');
             },
@@ -83,7 +84,7 @@ export class ShortenerComponent implements OnInit {
               console.log('<<<<<<<<<<<<<<<<<<<<----complete');
             }
            );
-      // if (!this.loggedInVar) this.dialog.open( LoginReminderDialogComponent );
+      // if (!this.loggedInVar) this.dialog.open( LoginReminderModalComponent );
     } else {
       // TODO input or inputError blinking, vibrating, animation....
     }
@@ -97,18 +98,18 @@ export class ShortenerComponent implements OnInit {
 
 }
 
-// TODO export to modal folder
-@Component({
-  selector: 'app-login-reminder-dialog',
-  template: `
-  <h2 mat-dialog-title>Create an account</h2>
-  <mat-dialog-content>Do you want to create an account, so you can edit, delete and change the link you create?</mat-dialog-content>
-  <mat-dialog-actions>
-    <button mat-button mat-dialog-close>No</button>
-    <!-- Can optionally provide a result for the closing dialog. -->
-    <button mat-button [mat-dialog-close]="true">Yes</button>
-  </mat-dialog-actions>`,
-  styleUrls: ['./shortener.component.scss']
-})
-export class LoginReminderDialogComponent {
-}
+// // TODO export to modal folder
+// @Component({
+//   selector: 'app-login-reminder-dialog',
+//   template: `
+//   <h2 mat-dialog-title>Create an account</h2>
+//   <mat-dialog-content>Do you want to create an account, so you can edit, delete and change the link you create?</mat-dialog-content>
+//   <mat-dialog-actions>
+//     <button mat-button mat-dialog-close>No</button>
+//     <!-- Can optionally provide a result for the closing dialog. -->
+//     <button mat-button [mat-dialog-close]="true">Yes</button>
+//   </mat-dialog-actions>`,
+//   styleUrls: ['./shortener.component.scss']
+// })
+// export class LoginReminderDialogComponent {
+// }

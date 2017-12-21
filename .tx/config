@@ -1,0 +1,9 @@
+[main]
+host = https://www.transifex.com
+lang_map = en_US: en-US, de_DE: de-DE
+
+[tinygu.messages]
+file_filter = src/locale/messages.<lang>.xlf
+source_file = src/locale/messages.en-US.xlf
+source_lang = en_US
+type = XLIFF

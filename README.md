@@ -51,4 +51,13 @@ if webpack is missing (`ng version`) install it with `npm install --save-dev web
 ### i18n
 
 to generate the source file:
-`ng xi18n --locale en-US --i18nFormat=xlf --outputPath src/locale --app tinyGU --out-file messages_en-US` 
+`ng xi18n --locale en-US --i18nFormat=xlf --outputPath src/locale --out-file messages.en-US.xlf` 
+
+### transifex
+
+https://docs.transifex.com/client/installing-the-client
+
+`tx init`
+dont change Transifex instance and get a token from https://www.transifex.com/user/settings/api/ 
+
+`tx set --auto-remote https://www.transifex.com/physikonline/tinygu`

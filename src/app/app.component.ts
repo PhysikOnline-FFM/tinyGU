@@ -33,6 +33,7 @@ export class AppComponent {
 
 }
 
+// TODO export -> modal
 @Component({
   selector: 'app-login-reminder-dialog',
   template: `

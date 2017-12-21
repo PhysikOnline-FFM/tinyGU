@@ -4,7 +4,7 @@
 <!--<button mdc-button [primary]="true" [raised]="true">My Button</button>-->
 
 <mat-list>
-  <h3 mat-subheader>Mit diesem URL shortener lassen sich ausschließlich URLs der Goethe Universität kürzen. Dazu gehören folgende Domains:</h3>
+  <h3 mat-subheader i18n="help@@help.subheader">Mit diesem URL shortener lassen sich ausschließlich URLs der Goethe Universität kürzen. Dazu gehören folgende Domains:</h3>
   <mat-list-item *ngFor="let urls of whiteList">
     <a mat-line>{{ urls.url }}</a>
     <p mat-line>{{ urls.description }}</p>

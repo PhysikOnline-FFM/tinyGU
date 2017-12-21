@@ -5,11 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './login-reminder-modal.component.html',
   styleUrls: ['./login-reminder-modal.component.scss']
 })
-export class LoginReminderModalComponent implements OnInit {
+export class LoginReminderModalComponent {
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }

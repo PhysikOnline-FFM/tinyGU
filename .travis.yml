@@ -31,9 +31,7 @@ branches:
       - backend_prototype
       - mdl-prototype.discontinued
       - gh-pages
-      - master.test
-      - master.test1
-      - /^(?=.*(?:dev|developement|test|patch))(?=.*(?:\.|-|\/|\\|_)).*$/
+      - /^(?=.*(?:dev|developement|test1?|patch))(?=.*(?:\.|-|\/|\\|_)).*$/
       - /^(?:dev|developement|test|patch)$/
       # the last two lines exclude all branches that contain one of the strings only
       # or seperated at beginning or end by .-_/\
@@ -56,6 +54,8 @@ before_script: # commands to run before the build step
    - npm install
    - chmod +x ./before_script.travis.sh
    - ./before_script.travis.sh $TRAVIS_REPO_SLUG
+   - travis encrypt "physikonline:$SLACK_TRAVIS_TOKEN#travisci" --add notifications.slack.rooms
+   - cat .travis.yml
 
 script: # the build step
    - ng build --prod --base-href "https://physikonline-ffm.github.io/tinyGU/"
@@ -95,7 +95,7 @@ notifications:
       # https://travis-encrypt.github.io/
       # travis encrypt "<account>:<token>" --add notifications.slack -r <accountName>/<repoName>
       # travis encrypt "<account>:<token>#<channel>" --add notifications.slack.rooms -r <accountName>/<repoName>
-      secure: "hLne7ctE8Df9zD1NHlnf3shiXIvTQJR8sKyAirpORHn4oNT5u3Zjo9dNX5o+jimjlcbQTMl82BIEI6UguxFfFRXUQQV22pRdecajSRm+FgQ5r9WyV4/luHR7cByrMUbznpatirrUE5c9oHMqqvtlUfyNZOtaa010UKJcG4ssyxkVva/OMbBPVNK566v0o/Uccq/kbjcvthqDcqZ4b0B4cwL3nhP24xkLT/9xhe9xSMfI3HiFvRLypf+y4wBKzcdIzRdSMYJTQPyRXAPzF2NbbgVxDBHrWnj7DKZ8H2A8RUYrMeGbWlqEyIrmIL7k5uSyk7am5PFX4nV/mZRBIrhxNxca2rh44bQVzaPjRmxCuL+FO6mveWQF8G3Rb1yZvb+VXpv18QAxbOjKSps6YDxMZIsVTU/2lBeOf3VoP1GfDH9cT1CLQwn4Jfr33VMthX4HO9bnf4SP+ZNIuSPDw3ZB/qh0q63YUENv7MQTX2qiLgQoZOdHBO+nOmroQ1rKSVPXbYzyJcmyr5PgTjbWJVRyt5mggWTIxljhEpAha+GrxxxfTlZRCGs9f9tBStrbdHy6jvf1QIy5HaViKPKnHPh+0352IcWjnMnyCy132QBFEnadM98TvvEcKB5t0X5DVR1auF3C/xFmogVgQp2uXduU3ebVb9BIXdYnhscwWHFiRgE="
+      secure: "SECRET_SLACK_KEY"
       on_start: always
       on_failure: always
       on_success: always

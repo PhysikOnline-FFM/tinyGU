@@ -43,9 +43,9 @@
       </trans-unit>
       <trans-unit id="about.content.tech" datatype="html">
         <source>Entwickelt wurde TinyGU als OpenSource Projekt von Physikonline. Der source code ist auf GitHub einsehbar. Zum
-      Mitmachen wird eingeladen!<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+      Mitmachen wird eingeladen!
 
-      Das Frontend wurde mit Angular entwickelt und findet sich hier: https://github.com/PhysikOnline-FFM/tinyGU/<x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+      Das Frontend wurde mit Angular entwickelt und findet sich hier: https://github.com/PhysikOnline-FFM/tinyGU/
       Das Backend wurde mit .NET core 2 entwickelt und findet sich hier: https://github.com/PhysikOnline-FFM/tinygu_backend</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/about/about.component.ts</context>

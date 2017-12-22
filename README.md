@@ -13,6 +13,17 @@
 [![Travis branch](https://img.shields.io/travis/PhysikOnline-FFM/tinyGU/master.svg?label=master&nbsp;branch&nbsp;build)](https://github.com/PhysikOnline-FFM/tinyGU)
 [![Build Status](https://travis-ci.org/PhysikOnline-FFM/tinyGU.svg)](https://travis-ci.org/PhysikOnline-FFM/tinyGU) 
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/b2c6d2d1733432263fa2/maintainability)](https://codeclimate.com/github/PhysikOnline-FFM/tinyGU/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/b2c6d2d1733432263fa2/test_coverage)](https://codeclimate.com/github/PhysikOnline-FFM/tinyGU/test_coverage)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/07d7c397e89040838eb276ac6fee24f6)](https://www.codacy.com/app/klezm/tinyGU?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=PhysikOnline-FFM/tinyGU&amp;utm_campaign=Badge_Grade)
+[![bitHound Dependencies](https://www.bithound.io/github/PhysikOnline-FFM/tinyGU/badges/dependencies.svg)](https://www.bithound.io/github/PhysikOnline-FFM/tinyGU/master/dependencies/npm)
+[![bitHound Dev Dependencies](https://www.bithound.io/github/PhysikOnline-FFM/tinyGU/badges/devDependencies.svg)](https://www.bithound.io/github/PhysikOnline-FFM/tinyGU/master/dependencies/npm)
+[![Coverage Status](https://coveralls.io/repos/github/PhysikOnline-FFM/tinyGU/badge.svg?branch=master)](https://coveralls.io/github/PhysikOnline-FFM/tinyGU?branch=master)
+[![Known Vulnerabilities](https://snyk.io/test/github/physikonline-ffm/tinygu/badge.svg)](https://snyk.io/test/github/physikonline-ffm/tinygu)
+
+[![Issue Stats](http://issuestats.com/github/PhysikOnline-FFM/tinyGU/badge/issue?style=flat)](http://issuestats.com/github/PhysikOnline-FFM/tinyGU)
+[![Issue Stats](http://issuestats.com/github/PhysikOnline-FFM/tinyGU/badge/pr?style=flat)](http://issuestats.com/github/PhysikOnline-FFM/tinyGU)
+
 [![Github All Releases](https://img.shields.io/github/downloads/PhysikOnline-FFM/tinygu/total.svg?label=all&nbsp;releases)](https://github.com/PhysikOnline-FFM/tinyGU/releases)
 [![GitHub release](https://img.shields.io/github/release/PhysikOnline-FFM/tinygu/all.svg)](https://github.com/PhysikOnline-FFM/tinyGU/releases)
 [![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/PhysikOnline-FFM/tinyGU.svg?label=prerelease&nbsp;date)]()
@@ -29,16 +40,6 @@
 [![GitHub top language](https://img.shields.io/github/languages/top/PhysikOnline-FFM/tinyGU.svg)]()
 [![GitHub language count](https://img.shields.io/github/languages/count/PhysikOnline-FFM/tinyGU.svg)]()
 
-[![Issue Stats](http://issuestats.com/github/PhysikOnline-FFM/tinyGU/badge/issue?style=flat)](http://issuestats.com/github/PhysikOnline-FFM/tinyGU)
-[![Issue Stats](http://issuestats.com/github/PhysikOnline-FFM/tinyGU/badge/pr?style=flat)](http://issuestats.com/github/PhysikOnline-FFM/tinyGU)
-
-[![Maintainability](https://api.codeclimate.com/v1/badges/b2c6d2d1733432263fa2/maintainability)](https://codeclimate.com/github/PhysikOnline-FFM/tinyGU/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/b2c6d2d1733432263fa2/test_coverage)](https://codeclimate.com/github/PhysikOnline-FFM/tinyGU/test_coverage)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/07d7c397e89040838eb276ac6fee24f6)](https://www.codacy.com/app/klezm/tinyGU?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=PhysikOnline-FFM/tinyGU&amp;utm_campaign=Badge_Grade)
-[![bitHound Dependencies](https://www.bithound.io/github/PhysikOnline-FFM/tinyGU/badges/dependencies.svg)](https://www.bithound.io/github/PhysikOnline-FFM/tinyGU/master/dependencies/npm)
-[![bitHound Dev Dependencies](https://www.bithound.io/github/PhysikOnline-FFM/tinyGU/badges/devDependencies.svg)](https://www.bithound.io/github/PhysikOnline-FFM/tinyGU/master/dependencies/npm)
-[![Coverage Status](https://coveralls.io/repos/github/PhysikOnline-FFM/tinyGU/badge.svg?branch=master)](https://coveralls.io/github/PhysikOnline-FFM/tinyGU?branch=master)
-[![Known Vulnerabilities](https://snyk.io/test/github/physikonline-ffm/tinygu/badge.svg)](https://snyk.io/test/github/physikonline-ffm/tinygu)
 
 ## Requirements
 - https://angular.io/
@@ -72,7 +73,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 Alternatively when using Webstorm, you can set up a run command. Open "edit configurations" in the "Run" Menu. Add a "Bash" configuration. Now put in your Interpreter Path (cmd on Windows should be located at `C:\Windows\system32\cmd.exe`). And as Interpreter options enter `/k ng serve --port 4200`. now you can run the server by simply running the project.
 
-`ng serve --i18nFile=src/locale/messages.de-DE.xlf --i18nFormat=xlf --locale=de --missingTranslation=ignore`
+`ng serve --aot --i18nFile src/locale/messages.de-DE.xlf --i18nFormat xlf --locale de --missingTranslation ignore -p 4200`
 
 ### Build Angular App
 

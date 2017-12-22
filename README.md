@@ -1,10 +1,11 @@
 # TinyGU
 
-[//]: # (comments)
-[//]: # (https://badges.github.io/gh-badges/)
-[//]: # (https://badges.github.io/)
-[//]: # (https://shields.io)
-[//]: # (https://github.com/dustinmoris/CI-BuildStats)
+<!--
+https://badges.github.io/gh-badges/
+https://badges.github.io/
+https://shields.io
+https://github.com/dustinmoris/CI-BuildStats
+-->
 
 [![Angular Style Guide](https://img.shields.io/badge/Angular-Styleguide-red.svg)](https://angular.io/guide/styleguide)
 [![license](https://img.shields.io/github/license/PhysikOnline-FFM/tinyGU.svg)]()
@@ -25,22 +26,24 @@
 [![Issue Stats](http://issuestats.com/github/PhysikOnline-FFM/tinyGU/badge/issue?style=flat)](http://issuestats.com/github/PhysikOnline-FFM/tinyGU)
 [![Issue Stats](http://issuestats.com/github/PhysikOnline-FFM/tinyGU/badge/pr?style=flat)](http://issuestats.com/github/PhysikOnline-FFM/tinyGU)
 
-[![Github All Releases](https://img.shields.io/github/downloads/PhysikOnline-FFM/tinygu/total.svg?label=all&nbsp;releases)](https://github.com/PhysikOnline-FFM/tinyGU/releases)
 [![GitHub release](https://img.shields.io/github/release/PhysikOnline-FFM/tinygu/all.svg)](https://github.com/PhysikOnline-FFM/tinyGU/releases)
 [![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/PhysikOnline-FFM/tinyGU.svg?label=prerelease&nbsp;date)]()
-[![GitHub Release Date](https://img.shields.io/github/release-date/PhysikOnline-FFM/tinyGU.svg)]()
-[![Github commits (since latest release)](https://img.shields.io/github/commits-since/PhysikOnline-FFM/tinygu/latest.svg)]()
 [![GitHub last commit](https://img.shields.io/github/last-commit/PhysikOnline-FFM/tinyGU.svg)]()
 [![GitHub last commit (branch)](https://img.shields.io/github/last-commit/PhysikOnline-FFM/tinyGU/prototype.svg?label=last&nbsp;commit&nbsp;(prototype))]()
-[![GitHub issues](https://img.shields.io/github/issues/PhysikOnline-FFM/tinyGU.svg)](https://github.com/PhysikOnline-FFM/tinyGU/issues)
 [![](https://img.shields.io/github/issues-raw/PhysikOnline-FFM/tinyGU.svg)]()
 [![](https://img.shields.io/github/issues-closed-raw/PhysikOnline-FFM/tinyGU.svg)]()
-[![Github search hit counter](https://img.shields.io/github/search/PhysikOnline-FFM/tinyGU/goto.svg)]()
-[![Github file size](https://img.shields.io/github/size/PhysikOnline-FFM/tinyGU/src/locale/messages.en-US.xlf.svg?=filesize)]()
 [![GitHub repo size in bytes](https://img.shields.io/github/repo-size/PhysikOnline-FFM/tinyGU.svg)]()
 [![GitHub top language](https://img.shields.io/github/languages/top/PhysikOnline-FFM/tinyGU.svg)]()
 [![GitHub language count](https://img.shields.io/github/languages/count/PhysikOnline-FFM/tinyGU.svg)]()
 
+<!--
+[![Github All Releases](https://img.shields.io/github/downloads/PhysikOnline-FFM/tinygu/total.svg?label=all&nbsp;releases)](https://github.com/PhysikOnline-FFM/tinyGU/releases)
+[![GitHub Release Date](https://img.shields.io/github/release-date/PhysikOnline-FFM/tinyGU.svg)]()
+[![Github commits (since latest release)](https://img.shields.io/github/commits-since/PhysikOnline-FFM/tinygu/latest.svg)]()
+[![GitHub issues](https://img.shields.io/github/issues/PhysikOnline-FFM/tinyGU.svg)](https://github.com/PhysikOnline-FFM/tinyGU/issues)
+[![Github search hit counter](https://img.shields.io/github/search/PhysikOnline-FFM/tinyGU/goto.svg)]()
+[![Github file size](https://img.shields.io/github/size/PhysikOnline-FFM/tinyGU/src/locale/messages.en-US.xlf.svg?=filesize)]()
+-->
 
 ## Requirements
 - https://angular.io/
@@ -54,7 +57,7 @@
 **DEMO at
 https://physikonline-ffm.github.io/tinyGU**
 
-via Travis CI the Project is automatically built and pushed to the gh-pages branch. The .travis.yml-config file is in the root directoy.
+via Travis CI the Project is automatically built and pushed to the gh-pages branch. The .travis.yml-config file is in the root directoy. Branches with the suffix `nobuild` or `nb` seperated by `.` `-` `_` `/` `\ ` are not built on travis.
 
 Not set up yet but generally possible would be an integration of greenkeeper.io which automatically updates the packages for the builds at travis.
 

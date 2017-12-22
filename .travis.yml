@@ -33,7 +33,6 @@ branches:
       - gh-pages
       - /^(?=.*(?:nobuild|dontbuild|nb))(?=.*(?:\.|-|\/|\\|_)).*$/
 #     dont build branches that have a suffix or prefix nobuild, dontbuild or nb seperated by .-_/\
-
 #      - /^(?=.*(?:dev|developement|test1?|patch))(?=.*(?:\.|-|\/|\\|_)).*$/
 #      - /^(?:dev|developement|test|patch)$/
       # the last two lines exclude all branches that contain one of the strings only

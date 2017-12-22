@@ -9,14 +9,13 @@
 
     <mat-nav-list class="mat-nav-list">
 
+      <!--TODO inline style-->
       <p mat-card-title
          routerLink
          [routerLink]="['/']"
          (click)="start.close()"
          style="padding: 0px 2em;"
-         i18n="#TinyGU# the title of the app@@app.tinyGU"> <!--TODO inline style-->
-        TinyGU
-      </p>
+         i18n="#TinyGU# the title of the app@@app.tinyGU">TinyGU</p>
 
       <a *ngFor="let navItem of navItems"
          mat-list-item

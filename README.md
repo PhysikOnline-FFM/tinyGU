@@ -29,6 +29,9 @@
 [![GitHub top language](https://img.shields.io/github/languages/top/PhysikOnline-FFM/tinyGU.svg)]()
 [![GitHub language count](https://img.shields.io/github/languages/count/PhysikOnline-FFM/tinyGU.svg)]()
 
+[![Issue Stats](http://issuestats.com/github/PhysikOnline-FFM/tinyGU/badge/issue?style=flat)](http://issuestats.com/github/PhysikOnline-FFM/tinyGU)
+[![Issue Stats](http://issuestats.com/github/PhysikOnline-FFM/tinyGU/badge/pr?style=flat)](http://issuestats.com/github/PhysikOnline-FFM/tinyGU)
+
 [![Maintainability](https://api.codeclimate.com/v1/badges/b2c6d2d1733432263fa2/maintainability)](https://codeclimate.com/github/PhysikOnline-FFM/tinyGU/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/b2c6d2d1733432263fa2/test_coverage)](https://codeclimate.com/github/PhysikOnline-FFM/tinyGU/test_coverage)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/07d7c397e89040838eb276ac6fee24f6)](https://www.codacy.com/app/klezm/tinyGU?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=PhysikOnline-FFM/tinyGU&amp;utm_campaign=Badge_Grade)
@@ -68,6 +71,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 Alternatively when using Webstorm, you can set up a run command. Open "edit configurations" in the "Run" Menu. Add a "Bash" configuration. Now put in your Interpreter Path (cmd on Windows should be located at `C:\Windows\system32\cmd.exe`). And as Interpreter options enter `/k ng serve --port 4200`. now you can run the server by simply running the project.
+
+`ng serve --i18nFile=src/locale/messages.de-DE.xlf --i18nFormat=xlf --locale=de --missingTranslation=ignore`
 
 ### Build Angular App
 

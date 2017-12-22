@@ -1,0 +1,169 @@
+<?xml version="1.0" ?><xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file datatype="plaintext" original="ng2.template" source-language="en-US" target-language="de-DE">
+    <body>
+      <trans-unit datatype="html" id="app.tinyGU">
+        <source> 
+        TinyGU
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+        <note from="description" priority="1">#TinyGU# the title of the app</note>
+      </trans-unit>
+      <trans-unit datatype="html" id="about.title">
+        <source>
+          TinyGU.de   &amp;   goethe.link
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/about/about.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note from="description" priority="1">title of the about mat-card</note>
+      </trans-unit>
+      <trans-unit datatype="html" id="about.subtitle">
+        <source>
+          Der URL Shortener der Goethe-Universität Frankfurt am Main
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/about/about.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note from="description" priority="1">subtitle of about mat-card</note>
+      </trans-unit>
+      <trans-unit datatype="html" id="about.content.history">
+        <source>
+      TinyGU ist eine Eignentwicklung der Goethe Universität durch PhysikOnline. Mit dieser Seite wird ein URL
+      Shortener bereitgestellt der ausschließlich auf Webseiten die von der Goethe Universität betrieben werden
+      verweist. Dadurch ist bei Nutzung dieses Dienstes gewährleistet, dass man nur auf Seiten der Goethe Universität
+      weitergeleitet wird.
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/about/about.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note from="description" priority="1">history and about tinygu</note>
+      </trans-unit>
+      <trans-unit datatype="html" id="about.content.tech">
+        <source>
+      Entwickelt wurde TinyGU als OpenSource Projekt von Physikonline. Der source code ist auf GitHub einsehbar. Zum
+      Mitmachen wird eingeladen!<x ctype="lb" equiv-text="&lt;br/&gt;" id="LINE_BREAK"/><x ctype="lb" equiv-text="&lt;br/&gt;" id="LINE_BREAK"/>
+
+      Das Frontend wurde mit Angular entwickelt und findet sich hier: https://github.com/PhysikOnline-FFM/tinyGU/<x ctype="lb" equiv-text="&lt;br/&gt;" id="LINE_BREAK"/>
+      Das Backend wurde mit .NET core 2 entwickelt und findet sich hier: https://github.com/PhysikOnline-FFM/tinygu_backend
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/about/about.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note from="description" priority="1">technical aspects of tinygu</note>
+      </trans-unit>
+      <trans-unit datatype="html" id="help.subheader">
+        <source>Mit diesem URL shortener lassen sich ausschließlich URLs der Goethe Universität kürzen. Dazu gehören folgende Domains:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/help/help.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note from="description" priority="1">help</note>
+      </trans-unit>
+      <trans-unit datatype="html" id="httpModal.successMsg">
+        <source>
+    your link was created :)
+  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modal/http-response-modal.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note from="description" priority="1">link create success message</note>
+      </trans-unit>
+      <trans-unit datatype="html" id="loginReminderModal.title">
+        <source>
+  Create an account
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modal/login-reminder-modal.component.ts</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note from="description" priority="1">login reminder title</note>
+      </trans-unit>
+      <trans-unit datatype="html" id="loginReminderModal.reminderText">
+        <source>
+    Do you want to create an account, so you can edit, delete and change the link you create?
+  </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modal/login-reminder-modal.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note from="description" priority="1">remind to login</note>
+      </trans-unit>
+      <trans-unit datatype="html" id="loginReminderModal.noButton">
+        <source>No</source>
+        <target>Nein</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modal/login-reminder-modal.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit datatype="html" id="loginReminderModal.yesButton">
+        <source>Yes</source>
+        <target>Ja</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modal/login-reminder-modal.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit datatype="html" id="shortener.enterValidURL">
+        <source>
+              Please enter a valid URL
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/shortener/shortener.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit datatype="html" id="shortener.btnShorten">
+        <source>
+            shorten
+          </source>
+        <target>Kürzen</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/shortener/shortener.component.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+        <note from="description" priority="1">shorten command on Button</note>
+      </trans-unit>
+      <trans-unit datatype="html" id="shortener.btnMore">
+        <source>
+            more options
+          </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/shortener/shortener.component.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit datatype="html" id="shortener.linkTaken">
+        <source>
+                  short link is already taken
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/shortener/shortener.component.ts</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+        <note from="description" priority="1">chosen shortlink is already taken</note>
+      </trans-unit>
+      <trans-unit datatype="html" id="shortener.btnAddToAcc">
+        <source>
+              add to account
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/shortener/shortener.component.ts</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

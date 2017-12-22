@@ -1,5 +1,42 @@
 # TinyGU
 
+[//]: # (comments)
+[//]: # (https://badges.github.io/gh-badges/)
+[//]: # (https://badges.github.io/)
+[//]: # (https://shields.io)
+[//]: # (https://github.com/dustinmoris/CI-BuildStats)
+
+[![Angular Style Guide](https://img.shields.io/badge/Angular-Styleguide-red.svg)](https://angular.io/guide/styleguide)
+
+[![Build history](https://buildstats.info/travisci/chart/PhysikOnline-FFM/tinyGU?buildCount=100)](https://travis-ci.org/PhysikOnline-FFM/tinyGU)
+
+[![Travis branch](https://img.shields.io/travis/PhysikOnline-FFM/tinyGU/master.svg?label=master&nbsp;branch&nbsp;build)](https://github.com/PhysikOnline-FFM/tinyGU)
+[![Build Status](https://travis-ci.org/PhysikOnline-FFM/tinyGU.svg)](https://travis-ci.org/PhysikOnline-FFM/tinyGU) 
+
+[![Github All Releases](https://img.shields.io/github/downloads/PhysikOnline-FFM/tinygu/total.svg?label=all&nbsp;releases)](https://github.com/PhysikOnline-FFM/tinyGU/releases)
+[![GitHub release](https://img.shields.io/github/release/PhysikOnline-FFM/tinygu/all.svg)](https://github.com/PhysikOnline-FFM/tinyGU/releases)
+[![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/PhysikOnline-FFM/tinyGU.svg?label=prerelease&nbsp;date)]()
+[![GitHub Release Date](https://img.shields.io/github/release-date/PhysikOnline-FFM/tinyGU.svg)]()
+[![Github commits (since latest release)](https://img.shields.io/github/commits-since/PhysikOnline-FFM/tinygu/latest.svg)]()
+[![GitHub last commit](https://img.shields.io/github/last-commit/PhysikOnline-FFM/tinyGU.svg)]()
+[![GitHub last commit (branch)](https://img.shields.io/github/last-commit/PhysikOnline-FFM/tinyGU/prototype.svg?label=last&nbsp;commit&nbsp;(prototype))]()
+[![GitHub issues](https://img.shields.io/github/issues/PhysikOnline-FFM/tinyGU.svg)](https://github.com/PhysikOnline-FFM/tinyGU/issues)
+[![](https://img.shields.io/github/issues-raw/PhysikOnline-FFM/tinyGU.svg)]()
+[![](https://img.shields.io/github/issues-closed-raw/PhysikOnline-FFM/tinyGU.svg)]()
+[![Github search hit counter](https://img.shields.io/github/search/PhysikOnline-FFM/tinyGU/goto.svg)]()
+[![Github file size](https://img.shields.io/github/size/PhysikOnline-FFM/tinyGU/src/locale/messages.en-US.xlf.svg?=filesize)]()
+[![GitHub repo size in bytes](https://img.shields.io/github/repo-size/PhysikOnline-FFM/tinyGU.svg)]()
+[![GitHub top language](https://img.shields.io/github/languages/top/PhysikOnline-FFM/tinyGU.svg)]()
+[![GitHub language count](https://img.shields.io/github/languages/count/PhysikOnline-FFM/tinyGU.svg)]()
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/b2c6d2d1733432263fa2/maintainability)](https://codeclimate.com/github/PhysikOnline-FFM/tinyGU/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/b2c6d2d1733432263fa2/test_coverage)](https://codeclimate.com/github/PhysikOnline-FFM/tinyGU/test_coverage)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/07d7c397e89040838eb276ac6fee24f6)](https://www.codacy.com/app/klezm/tinyGU?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=PhysikOnline-FFM/tinyGU&amp;utm_campaign=Badge_Grade)
+[![bitHound Dependencies](https://www.bithound.io/github/PhysikOnline-FFM/tinyGU/badges/dependencies.svg)](https://www.bithound.io/github/PhysikOnline-FFM/tinyGU/master/dependencies/npm)
+[![bitHound Dev Dependencies](https://www.bithound.io/github/PhysikOnline-FFM/tinyGU/badges/devDependencies.svg)](https://www.bithound.io/github/PhysikOnline-FFM/tinyGU/master/dependencies/npm)
+[![Coverage Status](https://coveralls.io/repos/github/PhysikOnline-FFM/tinyGU/badge.svg?branch=master)](https://coveralls.io/github/PhysikOnline-FFM/tinyGU?branch=master)
+[![Known Vulnerabilities](https://snyk.io/test/github/physikonline-ffm/tinygu/badge.svg)](https://snyk.io/test/github/physikonline-ffm/tinygu)
+
 ## Requirements
 - https://angular.io/
 - https://material.angular.io/
@@ -61,3 +98,13 @@ https://docs.transifex.com/client/installing-the-client
 dont change Transifex instance and get a token from https://www.transifex.com/user/settings/api/ 
 
 `tx set --auto-remote https://www.transifex.com/physikonline/tinygu`
+
+https://github.com/PhysikOnline-FFM/tinyGU/tree/master/src/locale/messages.en-US.xlf
+
+`tx push --source`
+
+`tx pull --all`
+
+https://docs.transifex.com/integrations/github#section-integrating-with-travis-ci
+https://sites.google.com/site/transjoomla/transifex-tutorials/start-local-project
+https://wiki.dolibarr.org/index.php/Translator_documentation

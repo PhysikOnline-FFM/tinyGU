@@ -7,6 +7,7 @@
 [//]: # (https://github.com/dustinmoris/CI-BuildStats)
 
 [![Angular Style Guide](https://img.shields.io/badge/Angular-Styleguide-red.svg)](https://angular.io/guide/styleguide)
+[![license](https://img.shields.io/github/license/PhysikOnline-FFM/tinyGU.svg)]()
 
 [![Build history](https://buildstats.info/travisci/chart/PhysikOnline-FFM/tinyGU?buildCount=100)](https://travis-ci.org/PhysikOnline-FFM/tinyGU)
 

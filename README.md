@@ -83,7 +83,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ### update Angular
 to update Angular: https://angular-update-guide.firebaseapp.com/
 
-`npm outdated` and `npm update` are very handy commands  
+`npm outdated`, `npm update` and `npm ls --depth=0` are very handy commands  
 
 replace the version number `@'^5.0.0'` with `@latest` and probably add --save to the end of the command.
 On windows run cmd as admin!

@@ -31,8 +31,10 @@ branches:
       - backend_prototype
       - mdl-prototype.discontinued
       - gh-pages
-      - /^(?=.*(?:dev|developement|test1?|patch))(?=.*(?:\.|-|\/|\\|_)).*$/
-      - /^(?:dev|developement|test|patch)$/
+      - /^(?=.*(?:nobuild|dontbuild|nb))(?=.*(?:\.|-|\/|\\|_)).*$/
+#     dont build branches that have a suffix or prefix nobuild, dontbuild or nb seperated by .-_/\
+#      - /^(?=.*(?:dev|developement|test1?|patch))(?=.*(?:\.|-|\/|\\|_)).*$/
+#      - /^(?:dev|developement|test|patch)$/
       # the last two lines exclude all branches that contain one of the strings only
       # or seperated at beginning or end by .-_/\
 #      - master
@@ -58,7 +60,7 @@ before_script: # commands to run before the build step
 #   - cat .travis.yml
 
 script: # the build step
-   - ng build --prod --base-href "https://physikonline-ffm.github.io/tinyGU/" --aot --i18nFile src/locale/messages.de-DE.xlf --i18nFormat xlf --locale de
+   - ng build --prod --base-href "https://physikonline-ffm.github.io/tinyGU/" --i18nFile src/locale/messages.de-DE.xlf --i18nFormat xlf --locale de
 #   - npm run build.prod
 
 before_deploy:

@@ -13,6 +13,9 @@ https://github.com/boennemann/badges
 https://github.com/dwyl/repo-badges
 -->
 
+[![DEMO](https://img.shields.io/badge/DEMO-physikonline--ffm.github.io%2FtinyGU-blue.svg?style=for-the-badge)](https://physikonline-ffm.github.io/tinyGU/)
+
+
 [![Angular Style Guide](https://img.shields.io/badge/Angular-Styleguide-red.svg)](https://angular.io/guide/styleguide)
 [![license](https://img.shields.io/github/license/PhysikOnline-FFM/tinyGU.svg)]()
 

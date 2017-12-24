@@ -14,8 +14,9 @@
          routerLink
          [routerLink]="['/']"
          (click)="start.close()"
+         class="no-style-button"
          style="padding: 0px 2em;"
-         i18n="#TinyGU# the title of the app@@app.tinyGU">TinyGU</p>
+         i18n="#TinyGU# the title of the app@@app.sidenav-title">TinyGU</p>
 
       <a *ngFor="let navItem of navItems"
          mat-list-item
@@ -43,7 +44,9 @@
             <mat-icon>menu</mat-icon>
           </button>
 
-          <span i18n="@@app.tinyGU">TinyGU</span>
+          <span i18n="@@app.toolbar-title"
+                class="no-style-button"
+                [routerLink]="['/']">TinyGU</span>
         </div>
 
         <div fxFlex="1 1 auto"></div>

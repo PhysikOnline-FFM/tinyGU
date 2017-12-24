@@ -2,17 +2,20 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="app.tinyGU" datatype="html">
+      <trans-unit id="app.sidenav-title" datatype="html">
         <source>TinyGU</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.ts</context>
-          <context context-type="linenumber">18</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/app.component.ts</context>
-          <context context-type="linenumber">46</context>
+          <context context-type="linenumber">19</context>
         </context-group>
         <note priority="1" from="description">#TinyGU# the title of the app</note>
+      </trans-unit>
+      <trans-unit id="app.toolbar-title" datatype="html">
+        <source>TinyGU</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="about.title" datatype="html">
         <source>TinyGU.de   &amp;   goethe.link</source>

@@ -38,3 +38,8 @@ html, body{height:100%}
   color: white;
   text-decoration: none;
 }
+
+.no-style-button, .no-style-button:focus {
+  outline: 0px;       // disables the border around an focused element
+  cursor: pointer;
+}

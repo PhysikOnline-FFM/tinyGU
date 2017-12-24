@@ -1,0 +1,24 @@
+<!doctype html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>TinyGU 404 redirect page</title>
+<script>sessionStorage.redirect = location.href;</script>
+    <!--the first parameter in content is the time in seconds before redirect-->
+    <meta http-equiv="refresh" content="2; URL=/tinyGU" />
+  </head>
+
+  <body>
+    <p style="font-size:15px;">
+      404 -> redirect to index.html<br>
+      <span style="color:red; font-size:30px;">(GitHub pages doesnt support single-page-app routes)</span><br>
+      <a href="/tinyGU" style="font-size:100px;">direct link</a>
+    </p>
+    <p hidden>
+      http://www.404-error-page.com/404-error-page-too-short-problem-microsoft-ie.shtml
+    </p>
+  </body>
+
+</html>

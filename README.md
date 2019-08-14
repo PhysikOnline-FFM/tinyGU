@@ -63,6 +63,7 @@ https://github.com/dwyl/repo-badges
 
 ## Automatic deployment on GitHub Pages
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/593874890b2642aeb2c77bb1c85b3418)](https://www.codacy.com/app/klezm/tinyGU?utm_source=github.com&utm_medium=referral&utm_content=PhysikOnline-FFM/tinyGU&utm_campaign=badger)
 [![Build Status](https://travis-ci.org/PhysikOnline-FFM/tinyGU.svg)](https://travis-ci.org/PhysikOnline-FFM/tinyGU)
 **DEMO at
 https://physikonline-ffm.github.io/tinyGU**
